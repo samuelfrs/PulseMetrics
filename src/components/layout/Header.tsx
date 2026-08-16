@@ -15,6 +15,7 @@ import {
   X,
   KeyRound,
   AlertCircle,
+  Menu,
 } from 'lucide-react';
 
 const BRAZIL_STATES = [
@@ -35,7 +36,11 @@ const BRAZIL_STATES = [
 
 const ADMIN_MASTER_PASSWORD = process.env.NEXT_PUBLIC_ADMIN_SYNC_PASSWORD || 'samuel0102';
 
-export function Header() {
+interface HeaderProps {
+  onOpenMobileMenu?: () => void;
+}
+
+export function Header({ onOpenMobileMenu }: HeaderProps) {
   const {
     dataSource,
     loadDemoData,
@@ -102,19 +107,29 @@ export function Header() {
   };
 
   return (
-    <header className="h-16 border-b border-zinc-800/80 bg-zinc-950/60 backdrop-blur-md px-6 flex items-center justify-between sticky top-0 z-30">
-      {/* Left: State Filter & Status */}
-      <div className="flex items-center gap-4">
-        <div className="flex items-center gap-2 bg-zinc-900/80 border border-zinc-800 rounded-xl px-3 py-1.5 text-xs text-zinc-300">
-          <Filter className="w-3.5 h-3.5 text-emerald-400" />
-          <span className="text-zinc-400 font-medium">Estado:</span>
+    <header className="h-16 border-b border-zinc-800/80 bg-zinc-950/60 backdrop-blur-md px-4 sm:px-6 flex items-center justify-between sticky top-0 z-30">
+      {/* Left: Mobile Toggle, State Filter & Status */}
+      <div className="flex items-center gap-3">
+        {/* Mobile Hamburger Button */}
+        <button
+          onClick={onOpenMobileMenu}
+          className="md:hidden p-2 rounded-xl text-zinc-400 hover:text-white hover:bg-zinc-900 border border-zinc-800 transition"
+          aria-label="Abrir menu de navegação"
+        >
+          <Menu className="w-5 h-5" />
+        </button>
+
+        <div className="flex items-center gap-2 bg-zinc-900/80 border border-zinc-800 rounded-xl px-2.5 sm:px-3 py-1.5 text-xs text-zinc-300">
+          <Filter className="w-3.5 h-3.5 text-emerald-400 flex-shrink-0" />
+          <span className="hidden sm:inline text-zinc-400 font-medium">Estado:</span>
           <select
             value={selectedState}
             onChange={(e) => setSelectedState(e.target.value)}
-            className="bg-transparent text-zinc-100 font-semibold focus:outline-none cursor-pointer"
+            className="bg-transparent text-zinc-100 font-semibold focus:outline-none cursor-pointer text-xs"
+            aria-label="Filtrar por estado brasileiro"
           >
             <option value="ALL" className="bg-zinc-900 text-zinc-200">
-              Todos os Estados (BR)
+              Todos os Estados
             </option>
             {BRAZIL_STATES.filter((s) => s !== 'ALL').map((uf) => (
               <option key={uf} value={uf} className="bg-zinc-900 text-zinc-200">
@@ -126,7 +141,7 @@ export function Header() {
 
         {syncMessage && (
           <span
-            className={`text-xs px-3 py-1 rounded-lg border animate-fadeIn ${
+            className={`hidden lg:inline-block text-xs px-3 py-1 rounded-lg border animate-fadeIn ${
               syncStatus === 'synced'
                 ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20'
                 : 'bg-rose-500/10 text-rose-400 border-rose-500/20'
@@ -138,7 +153,7 @@ export function Header() {
       </div>
 
       {/* Right: Data Source Controls & Inspect SQL */}
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-2 sm:gap-3">
         {/* Source Toggle Pill */}
         <div className="hidden sm:flex items-center bg-zinc-900/90 border border-zinc-800 rounded-xl p-1 text-xs">
           <button
@@ -172,12 +187,12 @@ export function Header() {
           onClick={handleOpenSyncModal}
           disabled={syncStatus === 'syncing'}
           title="Salvar lote ativo no Supabase PostgreSQL (Protegido por senha)"
-          className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-medium bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-zinc-700/80 transition group"
+          className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-medium bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-zinc-700/80 transition group"
         >
           {syncStatus === 'syncing' ? (
             <>
               <div className="w-3.5 h-3.5 border-2 border-emerald-400 border-t-transparent rounded-full animate-spin" />
-              <span>Gravando...</span>
+              <span className="hidden sm:inline">Gravando...</span>
             </>
           ) : syncStatus === 'synced' ? (
             <>
@@ -187,7 +202,7 @@ export function Header() {
           ) : (
             <>
               <Lock className="w-3 h-3 text-amber-400/80 group-hover:text-amber-400" />
-              <span>Salvar no Supabase</span>
+              <span className="hidden sm:inline">Salvar no Supabase</span>
             </>
           )}
         </button>
@@ -195,10 +210,12 @@ export function Header() {
         {/* Master Inspect SQL Button */}
         <button
           onClick={() => openSqlInspector('kpi_mom_growth')}
-          className="flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 transition shadow-sm"
+          className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 transition shadow-sm"
+          aria-label="Ver Queries SQL do Catálogo"
         >
           <Code2 className="w-4 h-4" />
-          <span>Ver Queries SQL</span>
+          <span className="hidden sm:inline">Ver Queries SQL</span>
+          <span className="sm:hidden">SQL</span>
         </button>
       </div>
 
@@ -216,6 +233,7 @@ export function Header() {
               <button
                 onClick={() => setIsPasswordModalOpen(false)}
                 className="text-zinc-400 hover:text-white p-1 rounded-lg hover:bg-zinc-800 transition"
+                aria-label="Fechar modal"
               >
                 <X className="w-5 h-5" />
               </button>
