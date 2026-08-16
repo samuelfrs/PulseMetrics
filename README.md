@@ -1,6 +1,6 @@
 # 🚀 PulseMetrics
 
-> **Plataforma de Inteligência de Receita, Retenção (Coortes) e Segmentação RFM de Clientes**  
+> **Plataforma de Inteligência de Receita (GMV), Análise de Retenção (Coortes), Segmentação RFM e Explorador de Transações**  
 > Um Data App de alta performance construído com **Next.js (App Router), TypeScript, Tailwind CSS, Recharts e Supabase (PostgreSQL)**.
 
 [![Next.js](https://img.shields.io/badge/Next.js-15+-black?style=flat&logo=next.js)](https://nextjs.org/)
@@ -13,43 +13,51 @@
 
 ## 📌 Visão Geral & Proposta de Valor
 
-O **PulseMetrics** foi desenvolvido para transformar dados transacionais brutos em decisões executivas acionáveis com design moderno e velocidade instantânea.
+O **PulseMetrics** é uma plataforma analítica desenvolvida para transformar dados transacionais brutos em inteligência executiva acionável com design refinado e tempo de resposta instantâneo.
 
-Diferente de dashboards genéricos, a aplicação traz um diferencial técnico crucial para portfólio e produtos SaaS: o recurso **"Behind the Metric / Inspect SQL"**, permitindo inspecionar e copiar em tempo real a consulta SQL analítica (com **Window Functions**, **CTEs** e fórmulas estatísticas) por trás de cada gráfico e KPI.
+Diferente de dashboards puramente visuais, a aplicação foi construída com foco em **Engenharia e Ciência de Dados**, trazendo como grande diferencial o recurso **"Behind the Metric / Inspect SQL"**: cada KPI, gráfico ou recibo possui um botão que exibe a consulta SQL analítica correspondente (utilizando **Window Functions**, **CTEs**, **JOINs 1:N** e **fórmulas estatísticas**), permitindo inspecionar e copiar os scripts para uso em data warehouses como BigQuery, Snowflake ou PostgreSQL.
 
 ---
 
 ## ✨ Funcionalidades Principais
 
-1. 📊 **Painel Executivo de Receita (Overview):**
-   - KPIs em tempo real: Faturamento Total (GMV), Volume de Pedidos, Ticket Médio e Taxa de Recompra.
-   - Variação mês a mês (*MoM Growth*) calculada com a window function `LAG()`.
-   - Gráfico de área suave com histórico de vendas e distribuição por categoria de produto.
-   - Filtro geográfico interativo por estado brasileiro (UF).
+### 1. 📊 Painel Executivo de Receita (`/`)
+* **KPIs em Tempo Real:** Faturamento Total (GMV), Total de Pedidos Concluídos, Ticket Médio e Taxa de Recompra.
+* **Aceleração Mês a Mês (*MoM Growth*):** Variação percentual calculada via window function `LAG()`.
+* **Série Temporal de Vendas:** Gráfico de área com curva histórica de faturamento mensal.
+* **Distribuição por Categoria:** Participação percentual e volume financeiro por departamento/curso.
+* **Filtro Geográfico Interativo:** Segmentação de todas as métricas por Estado (UF).
 
-2. 🧩 **Matriz de Retenção por Coortes (Cohort Heatmap):**
-   - Agrupamento de clientes pelo mês da 1ª compra (Safra / Mês 0).
-   - Acompanhamento da curva de retenção mês a mês (M+0 até M+11).
-   - Cálculo automático da média de retenção global e diagnóstico de risco de churn no Mês +1.
+### 2. 🛍️ Explorador de Transações & Pedidos (`/orders`)
+* **Visualização Relacional 1:N:** Tabela pesquisável com consolidação de pedidos e contagem de itens por carrinho.
+* **Recibo Detalhado (*Order Detail Slide-over*):** Painel lateral estilo Stripe/Shopify mostrando dados do cliente, data, método de pagamento, itens individuais e somatório financeiro.
+* **Busca e Ordenação Instantâneas:** Filtro por ID do pedido, nome do cliente ou estado, com paginação integrada.
+* **Inspect SQL:** Consulta SQL com `JOIN` entre as 3 tabelas relacionais do pedido selecionado.
 
-3. 🎯 **Segmentação RFM de Clientes (Recência, Frequência, Valor):**
-   - Algoritmo estatístico percentilar baseado na window function `NTILE(5)`.
-   - Divisão automática da base em 7 clusters acionáveis (*Champions*, *Loyal Customers*, *Potential Loyalists*, *New Promising*, *At Risk / Churn Alert*, *Hibernating*, *Lost*).
-   - Gráfico de dispersão (*Scatter Plot*) interativo e tabela detalhada de clientes com busca e filtros.
-   - Recomendações práticas de Growth e ações de marketing para cada grupo.
+### 3. 🧩 Matriz de Retenção por Coortes (`/cohorts`)
+* **Safra de Clientes (Mês 0):** Agrupamento automático de clientes pelo mês de sua primeira compra.
+* **Acompanhamento Longitudinal (M+0 até M+11):** Heatmap visual com degradê de cores indicando a taxa de recompra de cada safra ao longo do tempo.
+* **Diagnóstico de Churn:** Média global de retenção e identificação de quedas críticas de retenção no Mês +1.
 
-4. 🔮 **Previsão de Receita & Regressão Linear (Forecasting):**
-   - Ajuste linear por Mínimos Quadrados Ordinários (OLS) sobre a série temporal de vendas diárias.
-   - Projeção de receita para os próximos 30 dias com intervalos de confiança de 95%.
-   - Média móvel de 7 dias e cálculo do coeficiente de determinação estatístico ($R^2$).
+### 4. 🎯 Segmentação RFM de Clientes (`/segmentation`)
+* **Algoritmo Estatístico NTILE(5):** Cálculo automático de pontuação de 1 a 5 para Recência, Frequência e Valor Monetário.
+* **7 Clusters Acionáveis:** *Champions*, *Loyal Customers*, *Potential Loyalists*, *New Promising*, *At Risk / Churn Alert*, *Hibernating* e *Lost*.
+* **Scatter Plot Interativo:** Gráfico de dispersão (Recência vs Frequência) com tamanho de bolha proporcional ao valor gasto.
+* **Plano de Ação de Marketing:** Recomendações práticas de Growth para cada grupo de clientes.
 
-5. 📁 **Módulo de Ingestão de Dados & Parser de CSV:**
-   - Permite que qualquer empresa teste a plataforma com dados próprios.
-   - Auto-detecção de cabeçalhos, mapeamento dinâmico de colunas e sanitização de formatos de moeda e data.
-   - Recálculo instantâneo de todas as telas em milissegundos sem recarregar a página.
+### 5. 🔮 Previsão de Receita & Regressão Linear (`/forecasting`)
+* **Modelagem Estatística OLS:** Ajuste linear de Mínimos Quadrados Ordinários ($ŷ = mx + b$) sobre a série diária de vendas.
+* **Projeção para os Próximos 30 Dias:** Linha de tendência futura com faixas de intervalo de confiança de 95%.
+* **Média Móvel de 7 Dias:** Suavização de ruídos e cálculo do coeficiente de determinação ($R^2$).
 
-6. 🔍 **Diferencial: Botão "Inspect SQL / Behind the Metric":**
-   - Modal em cada card e gráfico contendo a query SQL completa formatada, conceito estatístico, justificativa de negócio e botão de cópia.
+### 6. 📁 Módulo Universal de Ingestão de Dados & CSV (`/import`)
+* **Suporte Universal a Qualquer CSV:** Compatível com bases de e-commerce, EdTech, SaaS ou datasets públicos (Superstore, Olist, etc.).
+* **Auto-detecção e Mapeamento:** Mapeamento inteligente de colunas com tratamento de moedas brasileiras (`R$`) e datas internacionais.
+* **Consolidação de Múltiplos Itens:** Agrupa linhas de produtos no mesmo pedido sem gerar duplicatas.
+* **Recálculo Instantâneo In-Memory:** Todas as páginas se adaptam imediatamente aos novos dados carregados.
+
+### 7. 🔍 Catálogo de Consultas SQL (*Behind the Metric*)
+* Modal integrado em cada card e gráfico com a query SQL analítica formatada, conceitos estatísticos, justificativa de negócio e botão de cópia com 1 clique.
 
 ---
 
@@ -57,110 +65,110 @@ Diferente de dashboards genéricos, a aplicação traz um diferencial técnico c
 
 | Camada | Tecnologia | Propósito |
 |---|---|---|
-| **Framework Web** | Next.js 15+ (App Router) | Renderização híbrida, performance e rotas de API |
-| **Linguagem** | TypeScript | Tipagem estrita de schemas analíticos e entidades |
+| **Framework Web** | Next.js 15+ (App Router & Turbopack) | Arquitetura moderna de componentes, rotas estáticas e de API |
+| **Linguagem** | TypeScript | Tipagem estrita de schemas analíticos, entidades e props |
 | **Estilização** | Tailwind CSS v4 | Design minimalista, elegante, Dark Mode de alto contraste |
-| **Gráficos** | Recharts | Gráficos responsivos de Área, Linha, Dispersão e Barras |
-| **Banco de Dados** | Supabase (PostgreSQL) | Banco relacional analítico hospedado na região `sa-east-1` |
-| **Rotinas Automáticas** | Vercel Cron | Endpoint Keep-Alive para prevenir inatividade no banco |
-| **Parser CSV** | PapaParse | Ingestão e processamento de arquivos client-side |
+| **Visualização de Dados** | Recharts | Gráficos responsivos de Área, Linha, Dispersão e Barras |
+| **Banco de Dados** | Supabase (PostgreSQL) | Banco relacional analítico hospedado na região `sa-east-1` (São Paulo) |
+| **Rotinas Automáticas** | Vercel Cron | Endpoint Keep-Alive para prevenção de sleep mode do banco |
+| **Parser de Arquivos** | PapaParse | Ingestão e streaming de CSV no navegador |
+| **Ícones & Microinterações** | Lucide React + Canvas Confetti | Interface moderna com feedbacks visuais |
 
 ---
 
-## ⚙️ Como Rodar Localmente
+## 🗄️ Modelo de Dados Relacional (PostgreSQL / Supabase)
 
-### 1. Clone o repositório:
+O banco de dados foi modelado seguindo a 3ª Forma Normal (3NF) com índices analíticos otimizados:
+
+```sql
+-- 1. Tabela de Clientes
+CREATE TABLE customers (
+    customer_id VARCHAR(50) PRIMARY KEY,
+    customer_name VARCHAR(150) NOT NULL,
+    customer_email VARCHAR(150),
+    customer_state VARCHAR(2) NOT NULL,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- 2. Tabela de Pedidos (Carrinhos Consolidados)
+CREATE TABLE orders (
+    order_id VARCHAR(50) PRIMARY KEY,
+    customer_id VARCHAR(50) NOT NULL REFERENCES customers(customer_id),
+    order_status VARCHAR(30) DEFAULT 'delivered',
+    order_purchase_timestamp TIMESTAMP WITH TIME ZONE NOT NULL,
+    total_amount NUMERIC(12, 2) NOT NULL,
+    payment_method VARCHAR(30) DEFAULT 'credit_card'
+);
+
+-- 3. Tabela de Itens do Pedido (Relacionamento 1:N)
+CREATE TABLE order_items (
+    order_item_id VARCHAR(50) PRIMARY KEY,
+    order_id VARCHAR(50) NOT NULL REFERENCES orders(order_id) ON DELETE CASCADE,
+    product_id VARCHAR(50) NOT NULL,
+    product_category VARCHAR(100) NOT NULL,
+    price NUMERIC(12, 2) NOT NULL,
+    freight_value NUMERIC(12, 2) DEFAULT 0.00
+);
+
+-- Índices Analíticos
+CREATE INDEX idx_orders_customer_id ON orders(customer_id);
+CREATE INDEX idx_orders_timestamp ON orders(order_purchase_timestamp);
+CREATE INDEX idx_order_items_order_id ON order_items(order_id);
+CREATE INDEX idx_order_items_category ON order_items(product_category);
+```
+
+---
+
+## 🔒 Segurança & Controle de Origem de Dados
+
+* **Seletor de Fonte (*Data Source Switcher*):**
+  * `Demo 5.2k`: Processamento local na memória do navegador (latência 0ms).
+  * `Supabase DB`: Consulta paginada via API REST direta ao servidor PostgreSQL na nuvem.
+* **Gravação Administrativa Protegida:** O botão *"Salvar no Supabase"* realiza a sincronização limpa em lotes (*chunks de 500*) com validação por senha mestre configurável.
+* **Row Level Security (RLS):** Tabelas protegidas com políticas de leitura e gravação auditadas.
+* **Keep-Alive Protegido:** Endpoint de ping do banco com validação de token `CRON_SECRET`.
+
+---
+
+## ⚙️ Instalação e Execução Local
+
+### 1. Clonar o repositório:
 ```bash
 git clone https://github.com/SEU_USUARIO/PulseMetrics.git
 cd PulseMetrics
 ```
 
-### 2. Instale as dependências:
+### 2. Instalar dependências:
 ```bash
 npm install
 ```
 
-### 3. Configure as variáveis de ambiente:
-Crie o arquivo `.env.local` na raiz do projeto (use o `.env.example` como base):
+### 3. Configurar variáveis de ambiente:
+Crie um arquivo `.env.local` na raiz do projeto com base no `.env.example`:
 ```env
-NEXT_PUBLIC_SUPABASE_URL=https://ggorriqjhfisqvznqwvf.supabase.co
-NEXT_PUBLIC_SUPABASE_ANON_KEY=sua-chave-anon-aqui
-CRON_SECRET=seu-token-secreto-aqui
+NEXT_PUBLIC_SUPABASE_URL=https://sua-url-supabase.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=sua-chave-anon-publica
+NEXT_PUBLIC_ADMIN_SYNC_PASSWORD=sua-senha-admin
+CRON_SECRET=seu-segredo-de-cron
 ```
 
-### 4. Execute o servidor de desenvolvimento:
+### 4. Rodar o servidor de desenvolvimento:
 ```bash
 npm run dev
 ```
-
-Abra [http://localhost:3000](http://localhost:3000) no navegador para explorar a aplicação.
-
----
-
-## 🗄️ Estrutura do Banco de Dados (Supabase / PostgreSQL)
-
-O schema está salvo em `src/lib/supabase/schema.sql`:
-
-```sql
--- 1. Clientes
-CREATE TABLE customers (
-    customer_id VARCHAR(50) PRIMARY KEY,
-    customer_name VARCHAR(100) NOT NULL,
-    customer_email VARCHAR(100),
-    customer_state VARCHAR(2),
-    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
-);
-
--- 2. Pedidos
-CREATE TABLE orders (
-    order_id VARCHAR(50) PRIMARY KEY,
-    customer_id VARCHAR(50) REFERENCES customers(customer_id) ON DELETE CASCADE,
-    order_status VARCHAR(20) NOT NULL DEFAULT 'delivered',
-    order_purchase_timestamp TIMESTAMP WITH TIME ZONE NOT NULL,
-    total_amount NUMERIC(10, 2) NOT NULL,
-    payment_method VARCHAR(30) DEFAULT 'credit_card'
-);
-
--- 3. Itens do Pedido
-CREATE TABLE order_items (
-    order_item_id VARCHAR(50) PRIMARY KEY,
-    order_id VARCHAR(50) REFERENCES orders(order_id) ON DELETE CASCADE,
-    product_id VARCHAR(50) NOT NULL,
-    product_category VARCHAR(50) NOT NULL,
-    price NUMERIC(10, 2) NOT NULL,
-    freight_value NUMERIC(10, 2) NOT NULL DEFAULT 0.00
-);
-```
+Acesse [http://localhost:3000](http://localhost:3000) no seu navegador.
 
 ---
 
-## 🛡️ Vercel Cron & Anti-Inatividade do Supabase
+## 🚀 Deploy na Vercel
 
-Para impedir que instâncias gratuitas do banco de dados entrem em modo *sleep* por inatividade de 7 dias, foi configurado o arquivo `vercel.json`:
-
-```json
-{
-  "crons": [
-    {
-      "path": "/api/cron/keep-alive",
-      "schedule": "0 10 * * 1,4"
-    }
-  ]
-}
-```
-
-A rota `/api/cron/keep-alive` executa periodicamente uma verificação leve com resposta JSON:
-```json
-{
-  "status": "healthy",
-  "message": "Supabase Keep-Alive executado com sucesso!",
-  "latencyMs": 38,
-  "customersCount": 1350
-}
-```
+1. Faça o push do código para o seu repositório no **GitHub**.
+2. Importe o projeto no painel da **[Vercel](https://vercel.com/)**.
+3. Adicione as variáveis de ambiente (`NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, `CRON_SECRET`, etc.) nas configurações de Environment Variables da Vercel.
+4. Clique em **Deploy**!
 
 ---
 
-## 👨‍💻 Autor
+## 📄 Licença
 
-Desenvolvido por **Samuel** como projeto de portfólio de alto impacto técnico unindo Engenharia de Software Fullstack e Ciência/Engenharia de Dados.
+Este projeto está sob a licença [MIT](LICENSE). Desenvolvido com foco em excelência técnica, engenharia de dados e design de produto.
