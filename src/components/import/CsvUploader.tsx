@@ -187,31 +187,32 @@ export function CsvUploader() {
   const processAndCommit = (rows: any[], map: ColumnMapping) => {
     try {
       const customersMap = new Map<string, Customer>();
-      const orders: Order[] = [];
+      const ordersMap = new Map<string, Order>();
       const items: OrderItem[] = [];
 
       rows.forEach((row, index) => {
         const orderId = map.order_id && row[map.order_id]
-          ? String(row[map.order_id])
+          ? String(row[map.order_id]).trim()
           : `ORD-CSV-${index + 1}`;
 
         const customerId = map.customer_id && row[map.customer_id]
-          ? String(row[map.customer_id])
+          ? String(row[map.customer_id]).trim()
           : `CUST-CSV-${index + 1}`;
 
         const customerName = map.customer_name && row[map.customer_name]
-          ? String(row[map.customer_name])
+          ? String(row[map.customer_name]).trim()
           : `Cliente ${customerId}`;
 
         const customerState = map.customer_state && row[map.customer_state]
-          ? String(row[map.customer_state]).toUpperCase().slice(0, 2)
+          ? String(row[map.customer_state]).trim().slice(0, 2).toUpperCase()
           : 'SP';
 
         const rawDate = map.order_purchase_timestamp ? row[map.order_purchase_timestamp] : null;
         const timestamp = cleanDateValue(rawDate);
-        const totalAmount = cleanNumericValue(row[map.total_amount]);
-        const catName = map.category && row[map.category] ? String(row[map.category]) : 'Cursos & Assinaturas';
+        const itemPrice = cleanNumericValue(row[map.total_amount]);
+        const catName = map.category && row[map.category] ? String(row[map.category]).trim() : 'Geral';
 
+        // 1. Clientes únicos
         if (!customersMap.has(customerId)) {
           customersMap.set(customerId, {
             customer_id: customerId,
@@ -221,30 +222,39 @@ export function CsvUploader() {
           });
         }
 
+        // 2. Itens individuais
         const itemObj: OrderItem = {
           order_item_id: `ITEM-CSV-${index + 1}`,
           order_id: orderId,
-          product_id: `PROD-${catName.slice(0, 4).toUpperCase()}`,
+          product_id: `PROD-${catName.slice(0, 4).toUpperCase()}-${index + 1}`,
           product_category: catName,
-          price: totalAmount,
+          price: itemPrice,
           freight_value: 0,
         };
         items.push(itemObj);
 
-        orders.push({
-          order_id: orderId,
-          customer_id: customerId,
-          customer_name: customerName,
-          customer_state: customerState,
-          order_status: 'delivered',
-          order_purchase_timestamp: timestamp,
-          total_amount: totalAmount,
-          payment_method: 'credit_card',
-          items: [itemObj],
-        });
+        // 3. Pedidos consolidados (garante order_id único no banco)
+        if (!ordersMap.has(orderId)) {
+          ordersMap.set(orderId, {
+            order_id: orderId,
+            customer_id: customerId,
+            customer_name: customerName,
+            customer_state: customerState,
+            order_status: 'delivered',
+            order_purchase_timestamp: timestamp,
+            total_amount: itemPrice,
+            payment_method: 'credit_card',
+            items: [itemObj],
+          });
+        } else {
+          const existingOrder = ordersMap.get(orderId)!;
+          existingOrder.total_amount = Number((existingOrder.total_amount + itemPrice).toFixed(2));
+          existingOrder.items = (existingOrder.items || []).concat(itemObj);
+        }
       });
 
       const customers = Array.from(customersMap.values());
+      const orders = Array.from(ordersMap.values());
       loadCsvData(customers, orders, items);
 
       setIsSuccess(true);

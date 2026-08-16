@@ -165,7 +165,10 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
 
       for (let i = 0; i < customerPayload.length; i += 500) {
         const chunk = customerPayload.slice(i, i + 500);
-        await supabase.from('customers').insert(chunk);
+        const { error: custErr } = await supabase
+          .from('customers')
+          .upsert(chunk, { onConflict: 'customer_id' });
+        if (custErr) throw custErr;
       }
 
       // 3. Gravação de Pedidos em chunks de 500
@@ -180,7 +183,10 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
 
       for (let i = 0; i < orderPayload.length; i += 500) {
         const chunk = orderPayload.slice(i, i + 500);
-        await supabase.from('orders').insert(chunk);
+        const { error: ordErr } = await supabase
+          .from('orders')
+          .upsert(chunk, { onConflict: 'order_id' });
+        if (ordErr) throw ordErr;
       }
 
       // 4. Gravação de Itens do Pedido em chunks de 500
@@ -208,14 +214,18 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
 
       for (let i = 0; i < itemPayload.length; i += 500) {
         const chunk = itemPayload.slice(i, i + 500);
-        await supabase.from('order_items').insert(chunk);
+        const { error: itemErr } = await supabase
+          .from('order_items')
+          .upsert(chunk, { onConflict: 'order_item_id' });
+        if (itemErr) throw itemErr;
       }
 
       setIsLoading(false);
       return { success: true, count: orders.length };
     } catch (err: any) {
       setIsLoading(false);
-      return { success: false, count: 0, error: err?.message };
+      console.error('Erro na sincronização com Supabase:', err);
+      return { success: false, count: 0, error: err?.message || 'Erro de banco de dados' };
     }
   };
 
