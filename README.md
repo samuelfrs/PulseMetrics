@@ -134,7 +134,7 @@ CREATE INDEX idx_order_items_category ON order_items(product_category);
 
 ### 1. Clonar o repositório:
 ```bash
-git clone https://github.com/SEU_USUARIO/PulseMetrics.git
+git clone https://github.com/samuelfrs/PulseMetrics.git
 cd PulseMetrics
 ```
 
@@ -144,13 +144,19 @@ npm install
 ```
 
 ### 3. Configurar variáveis de ambiente:
-Crie um arquivo `.env.local` na raiz do projeto com base no `.env.example`:
-```env
-NEXT_PUBLIC_SUPABASE_URL=https://sua-url-supabase.supabase.co
-NEXT_PUBLIC_SUPABASE_ANON_KEY=sua-chave-anon-publica
-NEXT_PUBLIC_ADMIN_SYNC_PASSWORD=sua-senha-admin
-CRON_SECRET=seu-segredo-de-cron
+Copie o arquivo `.env.example` para `.env.local`:
+```bash
+cp .env.example .env.local
 ```
+
+Configure as chaves do seu projeto:
+
+| Variável | Descrição |
+|---|---|
+| `NEXT_PUBLIC_SUPABASE_URL` | URL da instância do Supabase (`https://<project-id>.supabase.co`) |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Chave pública `anon` do Supabase |
+| `NEXT_PUBLIC_ADMIN_SYNC_PASSWORD` | Senha administrativa para autorização de gravação no banco |
+| `CRON_SECRET` | Token de segurança da rotina Vercel Cron (Keep-Alive) |
 
 ### 4. Rodar o servidor de desenvolvimento:
 ```bash
