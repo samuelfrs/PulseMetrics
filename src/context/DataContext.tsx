@@ -95,23 +95,46 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
   const fetchSupabaseData = async (): Promise<boolean> => {
     setIsLoading(true);
     try {
-      const { data: dbOrders, error: ordersError } = await supabase
-        .from('orders')
-        .select('*')
-        .order('order_purchase_timestamp', { ascending: true })
-        .limit(10000);
+      // Helper para buscar todas as páginas (Supera o limite de 1000 linhas do PostgREST)
+      const fetchAllTableRows = async (tableName: string, orderCol?: string) => {
+        let allRows: any[] = [];
+        let from = 0;
+        const pageSize = 1000;
+        let hasMore = true;
 
-      if (ordersError || !dbOrders || dbOrders.length === 0) {
+        while (hasMore) {
+          let query = supabase.from(tableName).select('*').range(from, from + pageSize - 1);
+          if (orderCol) {
+            query = query.order(orderCol, { ascending: true });
+          }
+          const { data, error } = await query;
+          if (error || !data || data.length === 0) {
+            break;
+          }
+          allRows = allRows.concat(data);
+          if (data.length < pageSize) {
+            hasMore = false;
+          } else {
+            from += pageSize;
+          }
+        }
+        return allRows;
+      };
+
+      const [dbOrders, dbCustomers, dbItems] = await Promise.all([
+        fetchAllTableRows('orders', 'order_purchase_timestamp'),
+        fetchAllTableRows('customers'),
+        fetchAllTableRows('order_items'),
+      ]);
+
+      if (dbOrders.length === 0) {
         setIsLoading(false);
         return false;
       }
 
-      const { data: dbCustomers } = await supabase.from('customers').select('*');
-      const { data: dbItems } = await supabase.from('order_items').select('*');
-
       setOrders(dbOrders as Order[]);
-      setCustomers((dbCustomers || []) as Customer[]);
-      setItems((dbItems || []) as OrderItem[]);
+      setCustomers(dbCustomers as Customer[]);
+      setItems(dbItems as OrderItem[]);
       setDataSource('supabase');
       setIsLoading(false);
       return true;
