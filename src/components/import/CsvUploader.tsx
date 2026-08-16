@@ -12,6 +12,8 @@ import {
   ArrowRight,
   Sparkles,
   RefreshCw,
+  Download,
+  GraduationCap,
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
@@ -22,6 +24,7 @@ interface ColumnMapping {
   customer_state: string;
   order_purchase_timestamp: string;
   total_amount: string;
+  category?: string;
 }
 
 export function CsvUploader() {
@@ -42,6 +45,7 @@ export function CsvUploader() {
     customer_state: '',
     order_purchase_timestamp: '',
     total_amount: '',
+    category: '',
   });
 
   // Auto-detect matching headers
@@ -55,21 +59,23 @@ export function CsvUploader() {
     };
 
     setMapping({
-      order_id: findMatch(['orderid', 'idpedido', 'pedido', 'transacao', 'id']),
-      customer_id: findMatch(['customerid', 'idcliente', 'clienteid', 'cpf', 'email']),
-      customer_name: findMatch(['customername', 'nomecliente', 'cliente', 'nome', 'name']),
-      customer_state: findMatch(['customerstate', 'uf', 'estado', 'state', 'regiao']),
+      order_id: findMatch(['orderid', 'idpedido', 'idtransacao', 'pedido', 'transacao', 'id']),
+      customer_id: findMatch(['customerid', 'idaluno', 'idcliente', 'clienteid', 'cpf', 'email']),
+      customer_name: findMatch(['customername', 'nomecompleto', 'nomecliente', 'cliente', 'nome', 'name']),
+      customer_state: findMatch(['customerstate', 'ufresidencia', 'uf', 'estado', 'state', 'regiao']),
       order_purchase_timestamp: findMatch([
         'orderpurchasetimestamp',
-        'data',
+        'datamatricula',
         'datacompra',
         'datapedido',
+        'data',
         'date',
         'timestamp',
         'createdat',
       ]),
       total_amount: findMatch([
         'totalamount',
+        'valorpago',
         'valor',
         'total',
         'valortotal',
@@ -78,6 +84,7 @@ export function CsvUploader() {
         'price',
         'receita',
       ]),
+      category: findMatch(['categoriacurso', 'categoria', 'category', 'produto', 'curso']),
     });
   };
 
@@ -105,10 +112,44 @@ export function CsvUploader() {
     });
   };
 
+  const handleLoadSampleEdTechDirectly = async () => {
+    setIsProcessing(true);
+    setErrorMessage(null);
+    try {
+      const response = await fetch('/sample-datasets/edtech_digital_subscriptions.csv');
+      const csvText = await response.text();
+
+      Papa.parse(csvText, {
+        header: true,
+        skipEmptyLines: true,
+        complete: (results) => {
+          if (results.meta.fields && results.data) {
+            setParsedHeaders(results.meta.fields);
+            setRawRows(results.data);
+            autoDetectColumns(results.meta.fields);
+            
+            // Auto process sample
+            processAndCommit(results.data, {
+              order_id: 'id_transacao',
+              customer_id: 'id_aluno',
+              customer_name: 'nome_completo',
+              customer_state: 'uf_residencia',
+              order_purchase_timestamp: 'data_matricula',
+              total_amount: 'valor_pago',
+              category: 'categoria_curso',
+            });
+          }
+        },
+      });
+    } catch (err: any) {
+      setErrorMessage(`Erro ao carregar dataset de exemplo: ${err?.message}`);
+      setIsProcessing(false);
+    }
+  };
+
   const cleanNumericValue = (val: any): number => {
     if (typeof val === 'number') return val;
     if (!val) return 0;
-    // Replace currency symbols and handle Brazilian vs US notation
     const str = String(val)
       .replace(/[R$\s]/g, '')
       .replace(/\./g, '')
@@ -123,7 +164,6 @@ export function CsvUploader() {
     if (!isNaN(parsed.getTime())) {
       return parsed.toISOString();
     }
-    // Handle DD/MM/YYYY
     const match = String(val).match(/^(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{4})/);
     if (match) {
       const d = new Date(parseInt(match[3]), parseInt(match[2]) - 1, parseInt(match[1]));
@@ -132,37 +172,33 @@ export function CsvUploader() {
     return new Date().toISOString();
   };
 
-  const handleProcessAndImport = () => {
-    if (!mapping.total_amount) {
-      setErrorMessage('Por favor, mapeie ao menos a coluna de Valor Total.');
-      return;
-    }
-
-    setIsProcessing(true);
+  const processAndCommit = (rows: any[], map: ColumnMapping) => {
     try {
       const customersMap = new Map<string, Customer>();
       const orders: Order[] = [];
+      const items: OrderItem[] = [];
 
-      rawRows.forEach((row, index) => {
-        const orderId = mapping.order_id && row[mapping.order_id]
-          ? String(row[mapping.order_id])
+      rows.forEach((row, index) => {
+        const orderId = map.order_id && row[map.order_id]
+          ? String(row[map.order_id])
           : `ORD-CSV-${index + 1}`;
 
-        const customerId = mapping.customer_id && row[mapping.customer_id]
-          ? String(row[mapping.customer_id])
+        const customerId = map.customer_id && row[map.customer_id]
+          ? String(row[map.customer_id])
           : `CUST-CSV-${index + 1}`;
 
-        const customerName = mapping.customer_name && row[mapping.customer_name]
-          ? String(row[mapping.customer_name])
+        const customerName = map.customer_name && row[map.customer_name]
+          ? String(row[map.customer_name])
           : `Cliente ${customerId}`;
 
-        const customerState = mapping.customer_state && row[mapping.customer_state]
-          ? String(row[mapping.customer_state]).toUpperCase().slice(0, 2)
+        const customerState = map.customer_state && row[map.customer_state]
+          ? String(row[map.customer_state]).toUpperCase().slice(0, 2)
           : 'SP';
 
-        const rawDate = mapping.order_purchase_timestamp ? row[mapping.order_purchase_timestamp] : null;
+        const rawDate = map.order_purchase_timestamp ? row[map.order_purchase_timestamp] : null;
         const timestamp = cleanDateValue(rawDate);
-        const totalAmount = cleanNumericValue(row[mapping.total_amount]);
+        const totalAmount = cleanNumericValue(row[map.total_amount]);
+        const catName = map.category && row[map.category] ? String(row[map.category]) : 'Cursos & Assinaturas';
 
         if (!customersMap.has(customerId)) {
           customersMap.set(customerId, {
@@ -173,6 +209,16 @@ export function CsvUploader() {
           });
         }
 
+        const itemObj: OrderItem = {
+          order_item_id: `ITEM-CSV-${index + 1}`,
+          order_id: orderId,
+          product_id: `PROD-${catName.slice(0, 4).toUpperCase()}`,
+          product_category: catName,
+          price: totalAmount,
+          freight_value: 0,
+        };
+        items.push(itemObj);
+
         orders.push({
           order_id: orderId,
           customer_id: customerId,
@@ -182,16 +228,17 @@ export function CsvUploader() {
           order_purchase_timestamp: timestamp,
           total_amount: totalAmount,
           payment_method: 'credit_card',
+          items: [itemObj],
         });
       });
 
       const customers = Array.from(customersMap.values());
-      loadCsvData(customers, orders);
+      loadCsvData(customers, orders, items);
 
       setIsSuccess(true);
       confetti({
-        particleCount: 80,
-        spread: 70,
+        particleCount: 90,
+        spread: 75,
         origin: { y: 0.6 },
       });
     } catch (err: any) {
@@ -201,17 +248,62 @@ export function CsvUploader() {
     }
   };
 
+  const handleManualProcess = () => {
+    if (!mapping.total_amount) {
+      setErrorMessage('Por favor, mapeie ao menos a coluna de Valor.');
+      return;
+    }
+    setIsProcessing(true);
+    processAndCommit(rawRows, mapping);
+  };
+
   return (
     <div className="p-6 rounded-2xl bg-zinc-900/60 border border-zinc-800/80 space-y-8">
-      {/* Header */}
-      <div>
-        <h3 className="text-lg font-semibold text-zinc-100 flex items-center gap-2">
-          <UploadCloud className="w-5 h-5 text-emerald-400" />
-          <span>Ingestão de Dados & Parser Inteligente de CSV</span>
-        </h3>
-        <p className="text-xs text-zinc-400 mt-1">
-          Importe seus próprios dados de vendas para recalcular instantaneamente todas as métricas, coortes e clusters RFM.
-        </p>
+      {/* Header with Sample Download Card */}
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div>
+          <h3 className="text-lg font-semibold text-zinc-100 flex items-center gap-2">
+            <UploadCloud className="w-5 h-5 text-emerald-400" />
+            <span>Ingestão de Dados & Parser Inteligente de CSV</span>
+          </h3>
+          <p className="text-xs text-zinc-400 mt-1">
+            Importe dados de qualquer negócio para recalcular métricas, coortes e clusters RFM instantaneamente.
+          </p>
+        </div>
+
+        {/* Quick Sample Button */}
+        <div className="flex items-center gap-2">
+          <a
+            href="/sample-datasets/edtech_digital_subscriptions.csv"
+            download="edtech_digital_subscriptions.csv"
+            className="flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-medium bg-zinc-800 hover:bg-zinc-700 text-zinc-200 border border-zinc-700 transition"
+          >
+            <Download className="w-4 h-4 text-emerald-400" />
+            <span>Baixar CSV EdTech / SaaS</span>
+          </a>
+
+          <button
+            onClick={handleLoadSampleEdTechDirectly}
+            disabled={isProcessing}
+            className="flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 border border-emerald-500/40 transition"
+          >
+            <GraduationCap className="w-4 h-4" />
+            <span>Carregar Exemplo EdTech Direto</span>
+          </button>
+        </div>
+      </div>
+
+      {/* Alternative Business Model Highlight */}
+      <div className="p-4 rounded-xl bg-zinc-950/80 border border-zinc-800 flex items-start gap-3 text-xs text-zinc-300">
+        <div className="p-2 rounded-lg bg-emerald-500/10 text-emerald-400">
+          <Sparkles className="w-4 h-4" />
+        </div>
+        <div className="space-y-1">
+          <strong className="text-zinc-100 font-semibold">Exemplo Alternativo Disponível (EdTech & Assinaturas SaaS):</strong>
+          <p className="text-zinc-400 leading-relaxed">
+            Criamos um dataset com matrículas de cursos online, mentorias e assinaturas mensais recorrentes (<code className="text-emerald-400">id_aluno</code>, <code className="text-emerald-400">valor_pago</code>, <code className="text-emerald-400">categoria_curso</code>). Baixe o CSV acima ou clique em <em>"Carregar Exemplo EdTech Direto"</em> para ver a plataforma se adequar a outro modelo de negócio!
+          </p>
+        </div>
       </div>
 
       {/* Upload Box */}
@@ -282,12 +374,13 @@ export function CsvUploader() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {[
-              { key: 'order_id', label: 'ID do Pedido', req: false },
-              { key: 'customer_id', label: 'ID do Cliente', req: false },
-              { key: 'customer_name', label: 'Nome do Cliente', req: false },
+              { key: 'order_id', label: 'ID do Pedido / Matrícula', req: false },
+              { key: 'customer_id', label: 'ID do Cliente / Aluno', req: false },
+              { key: 'customer_name', label: 'Nome Completo', req: false },
               { key: 'customer_state', label: 'Estado / UF', req: false },
-              { key: 'order_purchase_timestamp', label: 'Data do Pedido', req: false },
-              { key: 'total_amount', label: 'Valor Total (R$)', req: true },
+              { key: 'order_purchase_timestamp', label: 'Data da Transação', req: false },
+              { key: 'total_amount', label: 'Valor Pago (R$)', req: true },
+              { key: 'category', label: 'Categoria / Curso', req: false },
             ].map(({ key, label, req }) => (
               <div key={key} className="space-y-1.5 p-3 rounded-xl bg-zinc-950/80 border border-zinc-800">
                 <label className="text-xs font-medium text-zinc-300 flex items-center justify-between">
@@ -295,7 +388,7 @@ export function CsvUploader() {
                   {req && <span className="text-emerald-400 text-[10px]">Obrigatório</span>}
                 </label>
                 <select
-                  value={(mapping as any)[key]}
+                  value={(mapping as any)[key] || ''}
                   onChange={(e) =>
                     setMapping({ ...mapping, [key]: e.target.value })
                   }
@@ -315,7 +408,7 @@ export function CsvUploader() {
           {/* Action Button */}
           <div className="flex justify-end pt-4">
             <button
-              onClick={handleProcessAndImport}
+              onClick={handleManualProcess}
               disabled={isProcessing}
               className="flex items-center gap-2 px-6 py-2.5 rounded-xl font-semibold text-xs bg-emerald-600 hover:bg-emerald-500 text-zinc-950 transition shadow-lg shadow-emerald-600/20"
             >

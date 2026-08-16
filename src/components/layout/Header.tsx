@@ -11,6 +11,10 @@ import {
   CloudUpload,
   Code2,
   Filter,
+  Lock,
+  X,
+  KeyRound,
+  AlertCircle,
 } from 'lucide-react';
 
 const BRAZIL_STATES = [
@@ -29,6 +33,8 @@ const BRAZIL_STATES = [
   'ES',
 ];
 
+const ADMIN_MASTER_PASSWORD = process.env.NEXT_PUBLIC_ADMIN_SYNC_PASSWORD || 'pulseadmin2026';
+
 export function Header() {
   const {
     dataSource,
@@ -43,13 +49,40 @@ export function Header() {
 
   const [syncStatus, setSyncStatus] = useState<'idle' | 'syncing' | 'synced' | 'error'>('idle');
   const [syncMessage, setSyncMessage] = useState('');
+  
+  // Password Protection Modal
+  const [isPasswordModalOpen, setIsPasswordModalOpen] = useState(false);
+  const [passwordInput, setPasswordInput] = useState('');
+  const [passwordError, setPasswordError] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  const handleSyncSupabase = async () => {
+  const handleOpenSyncModal = () => {
+    if (isAuthenticated) {
+      executeSync();
+    } else {
+      setPasswordError(false);
+      setPasswordInput('');
+      setIsPasswordModalOpen(true);
+    }
+  };
+
+  const handleVerifyPassword = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (passwordInput === ADMIN_MASTER_PASSWORD) {
+      setIsAuthenticated(true);
+      setIsPasswordModalOpen(false);
+      executeSync();
+    } else {
+      setPasswordError(true);
+    }
+  };
+
+  const executeSync = async () => {
     setSyncStatus('syncing');
     const result = await syncCurrentDataToSupabase();
     if (result.success) {
       setSyncStatus('synced');
-      setSyncMessage(`${result.count} registros salvos no Supabase!`);
+      setSyncMessage(`${result.count} registros gravados com segurança no Supabase!`);
       setTimeout(() => {
         setSyncStatus('idle');
         setSyncMessage('');
@@ -64,7 +97,7 @@ export function Header() {
   const handleLoadSupabase = async () => {
     const success = await fetchSupabaseData();
     if (!success) {
-      alert('Nenhum dado encontrado no Supabase ainda. Você pode sincronizar o dataset atual com 1 clique no botão "Salvar no Supabase"!');
+      alert('Nenhum dado encontrado no Supabase ainda. Você pode salvar o lote atual clicando em "Salvar no Supabase" (Área Admin protegida por senha)!');
     }
   };
 
@@ -134,26 +167,26 @@ export function Header() {
           </button>
         </div>
 
-        {/* Sync to Supabase Button */}
+        {/* Sync to Supabase Button (Protected) */}
         <button
-          onClick={handleSyncSupabase}
+          onClick={handleOpenSyncModal}
           disabled={syncStatus === 'syncing'}
-          title="Salvar lote atual de pedidos diretamente nas tabelas do PostgreSQL no Supabase"
-          className="flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-medium bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-zinc-700/80 transition"
+          title="Salvar lote ativo no Supabase PostgreSQL (Protegido por senha)"
+          className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-medium bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-zinc-700/80 transition group"
         >
           {syncStatus === 'syncing' ? (
             <>
               <div className="w-3.5 h-3.5 border-2 border-emerald-400 border-t-transparent rounded-full animate-spin" />
-              <span>Sincronizando...</span>
+              <span>Gravando...</span>
             </>
           ) : syncStatus === 'synced' ? (
             <>
               <Check className="w-3.5 h-3.5 text-emerald-400" />
-              <span>Sincronizado!</span>
+              <span className="text-emerald-400">Gravado!</span>
             </>
           ) : (
             <>
-              <CloudUpload className="w-3.5 h-3.5 text-emerald-400" />
+              <Lock className="w-3 h-3 text-amber-400/80 group-hover:text-amber-400" />
               <span>Salvar no Supabase</span>
             </>
           )}
@@ -168,6 +201,74 @@ export function Header() {
           <span>Ver Queries SQL</span>
         </button>
       </div>
+
+      {/* Admin Password Modal */}
+      {isPasswordModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm animate-fadeIn">
+          <div className="relative w-full max-w-md bg-zinc-950 border border-zinc-800 rounded-2xl shadow-2xl overflow-hidden p-6 space-y-5">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2.5 text-zinc-100 font-semibold text-base">
+                <div className="p-2 rounded-xl bg-amber-500/10 text-amber-400 border border-amber-500/20">
+                  <KeyRound className="w-5 h-5" />
+                </div>
+                <span>Área Restrita do Administrador</span>
+              </div>
+              <button
+                onClick={() => setIsPasswordModalOpen(false)}
+                className="text-zinc-400 hover:text-white p-1 rounded-lg hover:bg-zinc-800 transition"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <p className="text-xs text-zinc-400 leading-relaxed">
+              Para proteger o banco de dados contra inserções não autorizadas por visitantes, insira a senha mestre de gravação no Supabase:
+            </p>
+
+            <form onSubmit={handleVerifyPassword} className="space-y-4">
+              <div>
+                <label className="block text-xs font-medium text-zinc-300 mb-1.5">
+                  Senha Mestre (Padrão: <code className="text-emerald-400 font-mono">pulseadmin2026</code>)
+                </label>
+                <input
+                  type="password"
+                  value={passwordInput}
+                  onChange={(e) => {
+                    setPasswordInput(e.target.value);
+                    setPasswordError(false);
+                  }}
+                  placeholder="Digite a senha..."
+                  autoFocus
+                  className="w-full bg-zinc-900 border border-zinc-700 text-zinc-100 rounded-xl px-3.5 py-2 text-xs focus:outline-none focus:border-emerald-500 font-mono"
+                />
+              </div>
+
+              {passwordError && (
+                <div className="flex items-center gap-1.5 text-xs text-rose-400">
+                  <AlertCircle className="w-4 h-4 flex-shrink-0" />
+                  <span>Senha incorreta. Verifique e tente novamente.</span>
+                </div>
+              )}
+
+              <div className="flex justify-end gap-2 pt-2">
+                <button
+                  type="button"
+                  onClick={() => setIsPasswordModalOpen(false)}
+                  className="px-4 py-2 rounded-xl text-xs font-medium text-zinc-400 hover:bg-zinc-900 transition"
+                >
+                  Cancelar
+                </button>
+                <button
+                  type="submit"
+                  className="px-5 py-2 rounded-xl text-xs font-semibold bg-emerald-600 hover:bg-emerald-500 text-zinc-950 transition shadow-lg shadow-emerald-600/20"
+                >
+                  Autorizar & Gravar
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
     </header>
   );
 }
