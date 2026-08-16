@@ -41,8 +41,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# AI & Agent rules / configurations
+# AI & Agent rules / configurations / scratch
 .agents/
 AGENTS.md
 CLAUDE.md
 PROJECT_BLUEPRINT_PULSEMETRICS.md
+scratch/
