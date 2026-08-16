@@ -125,40 +125,71 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
   const syncCurrentDataToSupabase = async () => {
     try {
       setIsLoading(true);
-      // Batch upsert customers
-      if (customers.length > 0) {
-        const customerBatches = customers.slice(0, 1000);
-        await supabase.from('customers').upsert(customerBatches, { onConflict: 'customer_id' });
+
+      // 1. Limpa registros anteriores para refletir exatamente o dataset ativo
+      await supabase.from('order_items').delete().neq('order_item_id', '___NEVER___');
+      await supabase.from('orders').delete().neq('order_id', '___NEVER___');
+      await supabase.from('customers').delete().neq('customer_id', '___NEVER___');
+
+      // 2. Gravação de Clientes em chunks de 500
+      const customerPayload = customers.map((c) => ({
+        customer_id: c.customer_id,
+        customer_name: c.customer_name,
+        customer_email: c.customer_email || null,
+        customer_state: c.customer_state,
+        created_at: c.created_at,
+      }));
+
+      for (let i = 0; i < customerPayload.length; i += 500) {
+        const chunk = customerPayload.slice(i, i + 500);
+        await supabase.from('customers').insert(chunk);
       }
 
-      // Batch upsert orders
-      if (orders.length > 0) {
-        const orderBatches = orders.slice(0, 1000).map((o) => ({
+      // 3. Gravação de Pedidos em chunks de 500
+      const orderPayload = orders.map((o) => ({
+        order_id: o.order_id,
+        customer_id: o.customer_id,
+        order_status: o.order_status,
+        order_purchase_timestamp: o.order_purchase_timestamp,
+        total_amount: o.total_amount,
+        payment_method: o.payment_method,
+      }));
+
+      for (let i = 0; i < orderPayload.length; i += 500) {
+        const chunk = orderPayload.slice(i, i + 500);
+        await supabase.from('orders').insert(chunk);
+      }
+
+      // 4. Gravação de Itens do Pedido em chunks de 500
+      let itemsToInsert = items;
+      if (itemsToInsert.length === 0 && orders.length > 0) {
+        // Fallback: se não houver itens explícitos, criar 1 item por pedido
+        itemsToInsert = orders.map((o, idx) => ({
+          order_item_id: `ITEM-SYNC-${idx + 1}`,
           order_id: o.order_id,
-          customer_id: o.customer_id,
-          order_status: o.order_status,
-          order_purchase_timestamp: o.order_purchase_timestamp,
-          total_amount: o.total_amount,
-          payment_method: o.payment_method,
+          product_id: 'PROD-GENERIC',
+          product_category: 'Geral',
+          price: o.total_amount,
+          freight_value: 0,
         }));
-        await supabase.from('orders').upsert(orderBatches, { onConflict: 'order_id' });
       }
 
-      // Batch upsert order_items
-      if (items.length > 0) {
-        const itemBatches = items.slice(0, 1000).map((it) => ({
-          order_item_id: it.order_item_id,
-          order_id: it.order_id,
-          product_id: it.product_id,
-          product_category: it.product_category,
-          price: it.price,
-          freight_value: it.freight_value || 0,
-        }));
-        await supabase.from('order_items').upsert(itemBatches, { onConflict: 'order_item_id' });
+      const itemPayload = itemsToInsert.map((it) => ({
+        order_item_id: it.order_item_id,
+        order_id: it.order_id,
+        product_id: it.product_id,
+        product_category: it.product_category,
+        price: it.price,
+        freight_value: it.freight_value || 0,
+      }));
+
+      for (let i = 0; i < itemPayload.length; i += 500) {
+        const chunk = itemPayload.slice(i, i + 500);
+        await supabase.from('order_items').insert(chunk);
       }
 
       setIsLoading(false);
-      return { success: true, count: Math.min(orders.length, 1000) };
+      return { success: true, count: orders.length };
     } catch (err: any) {
       setIsLoading(false);
       return { success: false, count: 0, error: err?.message };
