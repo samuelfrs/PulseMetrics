@@ -9,6 +9,12 @@ export const metadata: Metadata = {
   title: 'PulseMetrics — Inteligência de Receita, Retenção & RFM',
   description:
     'Data App analítico de alta performance construído com Next.js, TypeScript, PostgreSQL e modelagem matemática avançada.',
+  icons: {
+    icon: [
+      { url: '/icon.svg', type: 'image/svg+xml' },
+    ],
+    apple: '/icon.svg',
+  },
 };
 
 export default function RootLayout({
