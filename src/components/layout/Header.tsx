@@ -33,7 +33,7 @@ const BRAZIL_STATES = [
   'ES',
 ];
 
-const ADMIN_MASTER_PASSWORD = process.env.NEXT_PUBLIC_ADMIN_SYNC_PASSWORD || 'pulseadmin2026';
+const ADMIN_MASTER_PASSWORD = process.env.NEXT_PUBLIC_ADMIN_SYNC_PASSWORD || 'samuel0102';
 
 export function Header() {
   const {
@@ -222,13 +222,13 @@ export function Header() {
             </div>
 
             <p className="text-xs text-zinc-400 leading-relaxed">
-              Para proteger o banco de dados contra inserções não autorizadas por visitantes, insira a senha mestre de gravação no Supabase:
+              Esta ação gravará os dados ativos diretamente nas tabelas de produção do Supabase. Digite sua senha de administrador para autorizar:
             </p>
 
             <form onSubmit={handleVerifyPassword} className="space-y-4">
               <div>
                 <label className="block text-xs font-medium text-zinc-300 mb-1.5">
-                  Senha Mestre (Padrão: <code className="text-emerald-400 font-mono">pulseadmin2026</code>)
+                  Senha de Administrador
                 </label>
                 <input
                   type="password"
