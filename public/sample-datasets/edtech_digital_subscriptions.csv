@@ -1,312 +1,312 @@
 id_transacao,id_aluno,nome_completo,uf_residencia,data_matricula,valor_pago,categoria_curso,forma_pagamento
-TRX-EDT-00001,ALUNO-101,Ana Paula Rezende,SP,2025-01-01T13:00:00.000Z,R$ 997,00,Formação Fullstack & IA,pix
-TRX-EDT-00002,ALUNO-109,Camila Nogueira,DF,2025-01-25T21:56:00.000Z,R$ 997,00,Formação Fullstack & IA,pix
-TRX-EDT-00003,ALUNO-117,Sabrina Teles,RS,2025-01-24T19:52:00.000Z,R$ 997,00,Formação Fullstack & IA,pix
-TRX-EDT-00004,ALUNO-125,Priscila Lovato,SC,2025-01-23T17:48:00.000Z,R$ 997,00,Formação Fullstack & IA,pix
-TRX-EDT-00005,ALUNO-133,Henrique Prado,PR,2025-01-22T15:44:00.000Z,R$ 997,00,Formação Fullstack & IA,pix
-TRX-EDT-00006,ALUNO-141,Samuel Barbosa,SP,2025-01-21T13:40:00.000Z,R$ 997,00,Formação Fullstack & IA,pix
-TRX-EDT-00007,ALUNO-149,Rafaela Peixoto,CE,2025-01-20T21:36:00.000Z,R$ 997,00,Formação Fullstack & IA,pix
-TRX-EDT-00008,ALUNO-102,Carlos Eduardo Pires,RJ,2025-02-05T14:07:00.000Z,R$ 497,00,Imersão em SQL & Data Analytics,credit_card
-TRX-EDT-00009,ALUNO-109,Camila Nogueira,DF,2025-02-16T20:11:00.000Z,R$ 2.490,00,Mentoria Executiva Tech 1on1,credit_card
-TRX-EDT-00010,ALUNO-110,Lucas Vasconcelos,PE,2025-02-04T22:03:00.000Z,R$ 497,00,Imersão em SQL & Data Analytics,credit_card
-TRX-EDT-00011,ALUNO-117,Sabrina Teles,RS,2025-02-02T16:11:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00012,ALUNO-118,Vinicius Morais,CE,2025-02-03T20:59:00.000Z,R$ 497,00,Imersão em SQL & Data Analytics,credit_card
-TRX-EDT-00013,ALUNO-126,Eduardo Xavier,DF,2025-02-02T18:55:00.000Z,R$ 497,00,Imersão em SQL & Data Analytics,credit_card
-TRX-EDT-00014,ALUNO-133,Henrique Prado,PR,2025-02-01T20:11:00.000Z,R$ 2.490,00,Mentoria Executiva Tech 1on1,credit_card
-TRX-EDT-00015,ALUNO-134,Renata Frota,CE,2025-02-01T16:51:00.000Z,R$ 497,00,Imersão em SQL & Data Analytics,credit_card
-TRX-EDT-00016,ALUNO-142,Luana Guimaraes,RJ,2025-02-25T14:47:00.000Z,R$ 497,00,Imersão em SQL & Data Analytics,credit_card
-TRX-EDT-00017,ALUNO-150,Otavio Neves,BA,2025-02-24T22:43:00.000Z,R$ 497,00,Imersão em SQL & Data Analytics,credit_card
-TRX-EDT-00018,ALUNO-101,Ana Paula Rezende,SP,2025-03-05T12:22:00.000Z,R$ 1.490,00,Certificação Cloud & DevOps,credit_card
-TRX-EDT-00019,ALUNO-102,Carlos Eduardo Pires,RJ,2025-03-10T13:22:00.000Z,R$ 2.490,00,Mentoria Executiva Tech 1on1,boleto
-TRX-EDT-00020,ALUNO-103,Juliana Mendes Castro,MG,2025-03-09T15:14:00.000Z,R$ 1.490,00,Certificação Cloud & DevOps,credit_card
-TRX-EDT-00021,ALUNO-109,Camila Nogueira,DF,2025-03-18T20:22:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00022,ALUNO-110,Lucas Vasconcelos,PE,2025-03-23T21:22:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),boleto
-TRX-EDT-00023,ALUNO-111,Diego Antunes,GO,2025-03-08T13:10:00.000Z,R$ 1.490,00,Certificação Cloud & DevOps,credit_card
-TRX-EDT-00024,ALUNO-119,Natalia Dorneles,PR,2025-03-07T21:06:00.000Z,R$ 1.490,00,Certificação Cloud & DevOps,credit_card
-TRX-EDT-00025,ALUNO-125,Priscila Lovato,SC,2025-03-17T12:22:00.000Z,R$ 1.490,00,Certificação Cloud & DevOps,credit_card
-TRX-EDT-00026,ALUNO-126,Eduardo Xavier,DF,2025-03-22T13:22:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),boleto
-TRX-EDT-00027,ALUNO-127,Isabela Campana,SP,2025-03-06T19:02:00.000Z,R$ 1.490,00,Certificação Cloud & DevOps,credit_card
-TRX-EDT-00028,ALUNO-133,Henrique Prado,PR,2025-03-03T20:22:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00029,ALUNO-135,Gustavo Linhares,RS,2025-03-05T17:58:00.000Z,R$ 1.490,00,Certificação Cloud & DevOps,credit_card
-TRX-EDT-00030,ALUNO-143,Matheus Coimbra,MG,2025-03-04T15:54:00.000Z,R$ 1.490,00,Certificação Cloud & DevOps,credit_card
-TRX-EDT-00031,ALUNO-149,Rafaela Peixoto,CE,2025-03-02T12:22:00.000Z,R$ 1.490,00,Certificação Cloud & DevOps,credit_card
-TRX-EDT-00032,ALUNO-150,Otavio Neves,BA,2025-03-07T13:22:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),boleto
-TRX-EDT-00033,ALUNO-101,Ana Paula Rezende,SP,2025-04-07T12:33:00.000Z,R$ 2.490,00,Mentoria Executiva Tech 1on1,boleto
-TRX-EDT-00034,ALUNO-102,Carlos Eduardo Pires,RJ,2025-04-12T13:33:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),pix
-TRX-EDT-00035,ALUNO-104,Felipe Siqueira,PR,2025-04-13T16:21:00.000Z,R$ 2.490,00,Mentoria Executiva Tech 1on1,boleto
-TRX-EDT-00036,ALUNO-112,Larissa Meireles,SP,2025-04-12T14:17:00.000Z,R$ 2.490,00,Mentoria Executiva Tech 1on1,boleto
-TRX-EDT-00037,ALUNO-118,Vinicius Morais,CE,2025-04-11T17:33:00.000Z,R$ 1.490,00,Certificação Cloud & DevOps,pix
-TRX-EDT-00038,ALUNO-119,Natalia Dorneles,PR,2025-04-16T18:33:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00039,ALUNO-120,Marcelo Bittencourt,SP,2025-04-11T22:13:00.000Z,R$ 2.490,00,Mentoria Executiva Tech 1on1,boleto
-TRX-EDT-00040,ALUNO-125,Priscila Lovato,SC,2025-04-19T12:33:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),boleto
-TRX-EDT-00041,ALUNO-126,Eduardo Xavier,DF,2025-04-24T13:33:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),pix
-TRX-EDT-00042,ALUNO-128,Daniel Gusmao,PE,2025-04-10T20:09:00.000Z,R$ 2.490,00,Mentoria Executiva Tech 1on1,boleto
-TRX-EDT-00043,ALUNO-135,Gustavo Linhares,RS,2025-04-15T22:33:00.000Z,R$ 497,00,Imersão em SQL & Data Analytics,credit_card
-TRX-EDT-00044,ALUNO-136,Jessica Brandao,SC,2025-04-09T18:05:00.000Z,R$ 2.490,00,Mentoria Executiva Tech 1on1,boleto
-TRX-EDT-00045,ALUNO-141,Samuel Barbosa,SP,2025-04-18T16:33:00.000Z,R$ 497,00,Imersão em SQL & Data Analytics,boleto
-TRX-EDT-00046,ALUNO-142,Luana Guimaraes,RJ,2025-04-23T17:33:00.000Z,R$ 1.490,00,Certificação Cloud & DevOps,pix
-TRX-EDT-00047,ALUNO-143,Matheus Coimbra,MG,2025-04-01T18:33:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00048,ALUNO-144,Amanda Esteves,ES,2025-04-08T16:01:00.000Z,R$ 2.490,00,Mentoria Executiva Tech 1on1,boleto
-TRX-EDT-00049,ALUNO-149,Rafaela Peixoto,CE,2025-04-04T12:33:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),boleto
-TRX-EDT-00050,ALUNO-101,Ana Paula Rezende,SP,2025-05-09T12:44:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),pix
-TRX-EDT-00051,ALUNO-105,Beatriz Fonseca,RS,2025-05-17T17:28:00.000Z,R$ 997,00,Formação Fullstack & IA,pix
-TRX-EDT-00052,ALUNO-111,Diego Antunes,GO,2025-05-05T22:44:00.000Z,R$ 1.490,00,Certificação Cloud & DevOps,credit_card
-TRX-EDT-00053,ALUNO-112,Larissa Meireles,SP,2025-05-10T23:44:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),boleto
-TRX-EDT-00054,ALUNO-113,Thiago Guedes,MG,2025-05-16T15:24:00.000Z,R$ 997,00,Formação Fullstack & IA,pix
-TRX-EDT-00055,ALUNO-117,Sabrina Teles,RS,2025-05-08T16:44:00.000Z,R$ 1.490,00,Certificação Cloud & DevOps,pix
-TRX-EDT-00056,ALUNO-118,Vinicius Morais,CE,2025-05-13T17:44:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00057,ALUNO-119,Natalia Dorneles,PR,2025-05-18T18:44:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00058,ALUNO-121,Aline Caldeira,RJ,2025-05-15T13:20:00.000Z,R$ 997,00,Formação Fullstack & IA,pix
-TRX-EDT-00059,ALUNO-128,Daniel Gusmao,PE,2025-05-09T15:44:00.000Z,R$ 497,00,Imersão em SQL & Data Analytics,boleto
-TRX-EDT-00060,ALUNO-129,Patricia Valente,GO,2025-05-14T21:16:00.000Z,R$ 997,00,Formação Fullstack & IA,pix
-TRX-EDT-00061,ALUNO-134,Renata Frota,CE,2025-05-12T21:44:00.000Z,R$ 497,00,Imersão em SQL & Data Analytics,credit_card
-TRX-EDT-00062,ALUNO-135,Gustavo Linhares,RS,2025-05-17T22:44:00.000Z,R$ 1.490,00,Certificação Cloud & DevOps,credit_card
-TRX-EDT-00063,ALUNO-136,Jessica Brandao,SC,2025-05-22T23:44:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),boleto
-TRX-EDT-00064,ALUNO-137,Marcio Toledo,BA,2025-05-13T19:12:00.000Z,R$ 997,00,Formação Fullstack & IA,pix
-TRX-EDT-00065,ALUNO-141,Samuel Barbosa,SP,2025-05-20T16:44:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),pix
-TRX-EDT-00066,ALUNO-142,Luana Guimaraes,RJ,2025-05-25T17:44:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00067,ALUNO-145,Cristiano Borges,GO,2025-05-12T17:08:00.000Z,R$ 997,00,Formação Fullstack & IA,pix
-TRX-EDT-00068,ALUNO-103,Juliana Mendes Castro,MG,2025-06-21T14:55:00.000Z,R$ 497,00,Imersão em SQL & Data Analytics,boleto
-TRX-EDT-00069,ALUNO-104,Felipe Siqueira,PR,2025-06-26T15:55:00.000Z,R$ 1.490,00,Certificação Cloud & DevOps,pix
-TRX-EDT-00070,ALUNO-105,Beatriz Fonseca,RS,2025-06-04T16:55:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00071,ALUNO-106,Rodrigo Alencar,BA,2025-06-21T18:35:00.000Z,R$ 497,00,Imersão em SQL & Data Analytics,credit_card
-TRX-EDT-00072,ALUNO-109,Camila Nogueira,DF,2025-06-24T20:55:00.000Z,R$ 497,00,Imersão em SQL & Data Analytics,credit_card
-TRX-EDT-00073,ALUNO-110,Lucas Vasconcelos,PE,2025-06-02T21:55:00.000Z,R$ 1.490,00,Certificação Cloud & DevOps,credit_card
-TRX-EDT-00074,ALUNO-111,Diego Antunes,GO,2025-06-07T22:55:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),boleto
-TRX-EDT-00075,ALUNO-114,Vanessa Trindade,ES,2025-06-20T16:31:00.000Z,R$ 497,00,Imersão em SQL & Data Analytics,credit_card
-TRX-EDT-00076,ALUNO-117,Sabrina Teles,RS,2025-06-10T16:55:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00077,ALUNO-121,Aline Caldeira,RJ,2025-06-03T20:55:00.000Z,R$ 497,00,Imersão em SQL & Data Analytics,credit_card
-TRX-EDT-00078,ALUNO-122,Alexandre Farias,SP,2025-06-19T14:27:00.000Z,R$ 497,00,Imersão em SQL & Data Analytics,credit_card
-TRX-EDT-00079,ALUNO-127,Isabela Campana,SP,2025-06-06T14:55:00.000Z,R$ 497,00,Imersão em SQL & Data Analytics,boleto
-TRX-EDT-00080,ALUNO-128,Daniel Gusmao,PE,2025-06-11T15:55:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),pix
-TRX-EDT-00081,ALUNO-129,Patricia Valente,GO,2025-06-16T16:55:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00082,ALUNO-130,Lucas Silveira,RJ,2025-06-18T22:23:00.000Z,R$ 497,00,Imersão em SQL & Data Analytics,credit_card
-TRX-EDT-00083,ALUNO-133,Henrique Prado,PR,2025-06-09T20:55:00.000Z,R$ 497,00,Imersão em SQL & Data Analytics,credit_card
-TRX-EDT-00084,ALUNO-134,Renata Frota,CE,2025-06-14T21:55:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00085,ALUNO-135,Gustavo Linhares,RS,2025-06-19T22:55:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),boleto
-TRX-EDT-00086,ALUNO-138,Debora Freitas,PE,2025-06-17T20:19:00.000Z,R$ 497,00,Imersão em SQL & Data Analytics,credit_card
-TRX-EDT-00087,ALUNO-141,Samuel Barbosa,SP,2025-06-22T16:55:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00088,ALUNO-144,Amanda Esteves,ES,2025-06-10T19:55:00.000Z,R$ 997,00,Formação Fullstack & IA,pix
-TRX-EDT-00089,ALUNO-145,Cristiano Borges,GO,2025-06-15T20:55:00.000Z,R$ 497,00,Imersão em SQL & Data Analytics,credit_card
-TRX-EDT-00090,ALUNO-146,Bruna Salgado,RS,2025-06-16T18:15:00.000Z,R$ 497,00,Imersão em SQL & Data Analytics,credit_card
-TRX-EDT-00091,ALUNO-150,Otavio Neves,BA,2025-06-13T13:55:00.000Z,R$ 997,00,Formação Fullstack & IA,credit_card
-TRX-EDT-00092,ALUNO-102,Carlos Eduardo Pires,RJ,2025-07-18T13:06:00.000Z,R$ 497,00,Imersão em SQL & Data Analytics,boleto
-TRX-EDT-00093,ALUNO-103,Juliana Mendes Castro,MG,2025-07-23T14:06:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),pix
-TRX-EDT-00094,ALUNO-104,Felipe Siqueira,PR,2025-07-01T15:06:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00095,ALUNO-107,Mariana Lacerda,CE,2025-07-25T19:42:00.000Z,R$ 1.490,00,Certificação Cloud & DevOps,credit_card
-TRX-EDT-00096,ALUNO-109,Camila Nogueira,DF,2025-07-26T20:06:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00097,ALUNO-110,Lucas Vasconcelos,PE,2025-07-04T21:06:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),boleto
-TRX-EDT-00098,ALUNO-114,Vanessa Trindade,ES,2025-07-24T13:06:00.000Z,R$ 497,00,Imersão em SQL & Data Analytics,boleto
-TRX-EDT-00099,ALUNO-115,Bruno Fagundes,RJ,2025-07-24T17:38:00.000Z,R$ 1.490,00,Certificação Cloud & DevOps,credit_card
-TRX-EDT-00100,ALUNO-120,Marcelo Bittencourt,SP,2025-07-27T19:06:00.000Z,R$ 497,00,Imersão em SQL & Data Analytics,credit_card
-TRX-EDT-00101,ALUNO-121,Aline Caldeira,RJ,2025-07-05T20:06:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00102,ALUNO-122,Alexandre Farias,SP,2025-07-10T21:06:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),boleto
-TRX-EDT-00103,ALUNO-123,Tatiane Aragao,BA,2025-07-23T15:34:00.000Z,R$ 1.490,00,Certificação Cloud & DevOps,credit_card
-TRX-EDT-00104,ALUNO-125,Priscila Lovato,SC,2025-07-25T12:06:00.000Z,R$ 997,00,Formação Fullstack & IA,credit_card
-TRX-EDT-00105,ALUNO-126,Eduardo Xavier,DF,2025-07-03T13:06:00.000Z,R$ 497,00,Imersão em SQL & Data Analytics,boleto
-TRX-EDT-00106,ALUNO-127,Isabela Campana,SP,2025-07-08T14:06:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),pix
-TRX-EDT-00107,ALUNO-128,Daniel Gusmao,PE,2025-07-13T15:06:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00108,ALUNO-131,Fernando Diniz,SP,2025-07-22T13:30:00.000Z,R$ 1.490,00,Certificação Cloud & DevOps,credit_card
-TRX-EDT-00109,ALUNO-133,Henrique Prado,PR,2025-07-11T20:06:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00110,ALUNO-134,Renata Frota,CE,2025-07-16T21:06:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),boleto
-TRX-EDT-00111,ALUNO-137,Marcio Toledo,BA,2025-07-04T12:06:00.000Z,R$ 997,00,Formação Fullstack & IA,credit_card
-TRX-EDT-00112,ALUNO-138,Debora Freitas,PE,2025-07-09T13:06:00.000Z,R$ 497,00,Imersão em SQL & Data Analytics,boleto
-TRX-EDT-00113,ALUNO-139,Wesley Pinheiro,DF,2025-07-21T21:26:00.000Z,R$ 1.490,00,Certificação Cloud & DevOps,credit_card
-TRX-EDT-00114,ALUNO-143,Matheus Coimbra,MG,2025-07-07T18:06:00.000Z,R$ 997,00,Formação Fullstack & IA,pix
-TRX-EDT-00115,ALUNO-144,Amanda Esteves,ES,2025-07-12T19:06:00.000Z,R$ 497,00,Imersão em SQL & Data Analytics,credit_card
-TRX-EDT-00116,ALUNO-145,Cristiano Borges,GO,2025-07-17T20:06:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00117,ALUNO-147,Leandro Rocha,PR,2025-07-20T19:22:00.000Z,R$ 1.490,00,Certificação Cloud & DevOps,credit_card
-TRX-EDT-00118,ALUNO-149,Rafaela Peixoto,CE,2025-07-10T12:06:00.000Z,R$ 997,00,Formação Fullstack & IA,credit_card
-TRX-EDT-00119,ALUNO-150,Otavio Neves,BA,2025-07-15T13:06:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),boleto
-TRX-EDT-00120,ALUNO-101,Ana Paula Rezende,SP,2025-08-15T12:17:00.000Z,R$ 497,00,Imersão em SQL & Data Analytics,boleto
-TRX-EDT-00121,ALUNO-102,Carlos Eduardo Pires,RJ,2025-08-20T13:17:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),pix
-TRX-EDT-00122,ALUNO-103,Juliana Mendes Castro,MG,2025-08-25T14:17:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00123,ALUNO-106,Rodrigo Alencar,BA,2025-08-13T17:17:00.000Z,R$ 997,00,Formação Fullstack & IA,pix
-TRX-EDT-00124,ALUNO-107,Mariana Lacerda,CE,2025-08-18T18:17:00.000Z,R$ 497,00,Imersão em SQL & Data Analytics,credit_card
-TRX-EDT-00125,ALUNO-108,Guilherme Bastos,SC,2025-08-04T20:49:00.000Z,R$ 2.490,00,Mentoria Executiva Tech 1on1,boleto
-TRX-EDT-00126,ALUNO-109,Camila Nogueira,DF,2025-08-01T20:17:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),boleto
-TRX-EDT-00127,ALUNO-112,Larissa Meireles,SP,2025-08-16T23:17:00.000Z,R$ 997,00,Formação Fullstack & IA,credit_card
-TRX-EDT-00128,ALUNO-113,Thiago Guedes,MG,2025-08-21T12:17:00.000Z,R$ 497,00,Imersão em SQL & Data Analytics,boleto
-TRX-EDT-00129,ALUNO-114,Vanessa Trindade,ES,2025-08-26T13:17:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),pix
-TRX-EDT-00130,ALUNO-115,Bruno Fagundes,RJ,2025-08-04T14:17:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00131,ALUNO-116,Renan Paiva,SP,2025-08-03T18:45:00.000Z,R$ 2.490,00,Mentoria Executiva Tech 1on1,boleto
-TRX-EDT-00132,ALUNO-118,Vinicius Morais,CE,2025-08-19T17:17:00.000Z,R$ 997,00,Formação Fullstack & IA,pix
-TRX-EDT-00133,ALUNO-119,Natalia Dorneles,PR,2025-08-24T18:17:00.000Z,R$ 497,00,Imersão em SQL & Data Analytics,credit_card
-TRX-EDT-00134,ALUNO-120,Marcelo Bittencourt,SP,2025-08-02T19:17:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00135,ALUNO-124,Caio Mendonca,MG,2025-08-02T16:41:00.000Z,R$ 2.490,00,Mentoria Executiva Tech 1on1,boleto
-TRX-EDT-00136,ALUNO-125,Priscila Lovato,SC,2025-08-27T12:17:00.000Z,R$ 497,00,Imersão em SQL & Data Analytics,boleto
-TRX-EDT-00137,ALUNO-126,Eduardo Xavier,DF,2025-08-05T13:17:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),pix
-TRX-EDT-00138,ALUNO-130,Lucas Silveira,RJ,2025-08-25T17:17:00.000Z,R$ 997,00,Formação Fullstack & IA,pix
-TRX-EDT-00139,ALUNO-131,Fernando Diniz,SP,2025-08-03T18:17:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00140,ALUNO-132,Gabriela Ramos,MG,2025-08-01T14:37:00.000Z,R$ 2.490,00,Mentoria Executiva Tech 1on1,boleto
-TRX-EDT-00141,ALUNO-136,Jessica Brandao,SC,2025-08-01T23:17:00.000Z,R$ 997,00,Formação Fullstack & IA,credit_card
-TRX-EDT-00142,ALUNO-137,Marcio Toledo,BA,2025-08-06T12:17:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),boleto
-TRX-EDT-00143,ALUNO-138,Debora Freitas,PE,2025-08-11T13:17:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),pix
-TRX-EDT-00144,ALUNO-140,Vivian Machado,SP,2025-08-25T22:33:00.000Z,R$ 2.490,00,Mentoria Executiva Tech 1on1,boleto
-TRX-EDT-00145,ALUNO-142,Luana Guimaraes,RJ,2025-08-04T17:17:00.000Z,R$ 997,00,Formação Fullstack & IA,pix
-TRX-EDT-00146,ALUNO-143,Matheus Coimbra,MG,2025-08-09T18:17:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00147,ALUNO-144,Amanda Esteves,ES,2025-08-14T19:17:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00148,ALUNO-148,Milena Campos,SC,2025-08-24T20:29:00.000Z,R$ 2.490,00,Mentoria Executiva Tech 1on1,boleto
-TRX-EDT-00149,ALUNO-149,Rafaela Peixoto,CE,2025-08-12T12:17:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),boleto
-TRX-EDT-00150,ALUNO-150,Otavio Neves,BA,2025-08-17T13:17:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),pix
-TRX-EDT-00151,ALUNO-101,Ana Paula Rezende,SP,2025-09-17T12:28:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),pix
-TRX-EDT-00152,ALUNO-105,Beatriz Fonseca,RS,2025-09-10T16:28:00.000Z,R$ 997,00,Formação Fullstack & IA,pix
-TRX-EDT-00153,ALUNO-106,Rodrigo Alencar,BA,2025-09-15T17:28:00.000Z,R$ 497,00,Imersão em SQL & Data Analytics,credit_card
-TRX-EDT-00154,ALUNO-107,Mariana Lacerda,CE,2025-09-20T18:28:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00155,ALUNO-111,Diego Antunes,GO,2025-09-13T22:28:00.000Z,R$ 997,00,Formação Fullstack & IA,credit_card
-TRX-EDT-00156,ALUNO-112,Larissa Meireles,SP,2025-09-18T23:28:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),boleto
-TRX-EDT-00157,ALUNO-113,Thiago Guedes,MG,2025-09-23T12:28:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),pix
-TRX-EDT-00158,ALUNO-117,Sabrina Teles,RS,2025-09-16T16:28:00.000Z,R$ 997,00,Formação Fullstack & IA,pix
-TRX-EDT-00159,ALUNO-118,Vinicius Morais,CE,2025-09-21T17:28:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00160,ALUNO-119,Natalia Dorneles,PR,2025-09-26T18:28:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00161,ALUNO-123,Tatiane Aragao,BA,2025-09-19T22:28:00.000Z,R$ 997,00,Formação Fullstack & IA,credit_card
-TRX-EDT-00162,ALUNO-124,Caio Mendonca,MG,2025-09-24T23:28:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),boleto
-TRX-EDT-00163,ALUNO-125,Priscila Lovato,SC,2025-09-02T12:28:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),pix
-TRX-EDT-00164,ALUNO-129,Patricia Valente,GO,2025-09-22T16:28:00.000Z,R$ 997,00,Formação Fullstack & IA,pix
-TRX-EDT-00165,ALUNO-130,Lucas Silveira,RJ,2025-09-27T17:28:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00166,ALUNO-131,Fernando Diniz,SP,2025-09-05T18:28:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00167,ALUNO-135,Gustavo Linhares,RS,2025-09-25T22:28:00.000Z,R$ 997,00,Formação Fullstack & IA,credit_card
-TRX-EDT-00168,ALUNO-136,Jessica Brandao,SC,2025-09-03T23:28:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),boleto
-TRX-EDT-00169,ALUNO-137,Marcio Toledo,BA,2025-09-08T12:28:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),pix
-TRX-EDT-00170,ALUNO-140,Vivian Machado,SP,2025-09-23T15:28:00.000Z,R$ 297,00,Workshop de Product Management,boleto
-TRX-EDT-00171,ALUNO-141,Samuel Barbosa,SP,2025-09-01T16:28:00.000Z,R$ 997,00,Formação Fullstack & IA,pix
-TRX-EDT-00172,ALUNO-142,Luana Guimaraes,RJ,2025-09-06T17:28:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00173,ALUNO-143,Matheus Coimbra,MG,2025-09-11T18:28:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00174,ALUNO-146,Bruna Salgado,RS,2025-09-26T21:28:00.000Z,R$ 297,00,Workshop de Product Management,credit_card
-TRX-EDT-00175,ALUNO-147,Leandro Rocha,PR,2025-09-04T22:28:00.000Z,R$ 997,00,Formação Fullstack & IA,credit_card
-TRX-EDT-00176,ALUNO-148,Milena Campos,SC,2025-09-09T23:28:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),boleto
-TRX-EDT-00177,ALUNO-104,Felipe Siqueira,PR,2025-10-07T15:39:00.000Z,R$ 997,00,Formação Fullstack & IA,pix
-TRX-EDT-00178,ALUNO-105,Beatriz Fonseca,RS,2025-10-12T16:39:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00179,ALUNO-106,Rodrigo Alencar,BA,2025-10-17T17:39:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00180,ALUNO-110,Lucas Vasconcelos,PE,2025-10-10T21:39:00.000Z,R$ 997,00,Formação Fullstack & IA,credit_card
-TRX-EDT-00181,ALUNO-111,Diego Antunes,GO,2025-10-15T22:39:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),boleto
-TRX-EDT-00182,ALUNO-112,Larissa Meireles,SP,2025-10-20T23:39:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),pix
-TRX-EDT-00183,ALUNO-116,Renan Paiva,SP,2025-10-13T15:39:00.000Z,R$ 997,00,Formação Fullstack & IA,pix
-TRX-EDT-00184,ALUNO-117,Sabrina Teles,RS,2025-10-18T16:39:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00185,ALUNO-118,Vinicius Morais,CE,2025-10-23T17:39:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00186,ALUNO-121,Aline Caldeira,RJ,2025-10-11T20:39:00.000Z,R$ 297,00,Workshop de Product Management,credit_card
-TRX-EDT-00187,ALUNO-122,Alexandre Farias,SP,2025-10-16T21:39:00.000Z,R$ 997,00,Formação Fullstack & IA,credit_card
-TRX-EDT-00188,ALUNO-123,Tatiane Aragao,BA,2025-10-21T22:39:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),boleto
-TRX-EDT-00189,ALUNO-124,Caio Mendonca,MG,2025-10-26T23:39:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),pix
-TRX-EDT-00190,ALUNO-127,Isabela Campana,SP,2025-10-14T14:39:00.000Z,R$ 297,00,Workshop de Product Management,boleto
-TRX-EDT-00191,ALUNO-128,Daniel Gusmao,PE,2025-10-19T15:39:00.000Z,R$ 997,00,Formação Fullstack & IA,pix
-TRX-EDT-00192,ALUNO-129,Patricia Valente,GO,2025-10-24T16:39:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00193,ALUNO-133,Henrique Prado,PR,2025-10-17T20:39:00.000Z,R$ 297,00,Workshop de Product Management,credit_card
-TRX-EDT-00194,ALUNO-134,Renata Frota,CE,2025-10-22T21:39:00.000Z,R$ 997,00,Formação Fullstack & IA,credit_card
-TRX-EDT-00195,ALUNO-135,Gustavo Linhares,RS,2025-10-27T22:39:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),boleto
-TRX-EDT-00196,ALUNO-139,Wesley Pinheiro,DF,2025-10-20T14:39:00.000Z,R$ 297,00,Workshop de Product Management,boleto
-TRX-EDT-00197,ALUNO-140,Vivian Machado,SP,2025-10-25T15:39:00.000Z,R$ 997,00,Formação Fullstack & IA,pix
-TRX-EDT-00198,ALUNO-141,Samuel Barbosa,SP,2025-10-03T16:39:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00199,ALUNO-145,Cristiano Borges,GO,2025-10-23T20:39:00.000Z,R$ 297,00,Workshop de Product Management,credit_card
-TRX-EDT-00200,ALUNO-146,Bruna Salgado,RS,2025-10-01T21:39:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00201,ALUNO-147,Leandro Rocha,PR,2025-10-06T22:39:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),boleto
-TRX-EDT-00202,ALUNO-102,Carlos Eduardo Pires,RJ,2025-11-26T13:50:00.000Z,R$ 297,00,Workshop de Product Management,boleto
-TRX-EDT-00203,ALUNO-103,Juliana Mendes Castro,MG,2025-11-04T14:50:00.000Z,R$ 997,00,Formação Fullstack & IA,pix
-TRX-EDT-00204,ALUNO-104,Felipe Siqueira,PR,2025-11-09T15:50:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00205,ALUNO-105,Beatriz Fonseca,RS,2025-11-14T16:50:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00206,ALUNO-108,Guilherme Bastos,SC,2025-11-02T19:50:00.000Z,R$ 297,00,Workshop de Product Management,credit_card
-TRX-EDT-00207,ALUNO-109,Camila Nogueira,DF,2025-11-07T20:50:00.000Z,R$ 997,00,Formação Fullstack & IA,credit_card
-TRX-EDT-00208,ALUNO-110,Lucas Vasconcelos,PE,2025-11-12T21:50:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),boleto
-TRX-EDT-00209,ALUNO-114,Vanessa Trindade,ES,2025-11-05T13:50:00.000Z,R$ 297,00,Workshop de Product Management,boleto
-TRX-EDT-00210,ALUNO-115,Bruno Fagundes,RJ,2025-11-10T14:50:00.000Z,R$ 997,00,Formação Fullstack & IA,pix
-TRX-EDT-00211,ALUNO-116,Renan Paiva,SP,2025-11-15T15:50:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00212,ALUNO-120,Marcelo Bittencourt,SP,2025-11-08T19:50:00.000Z,R$ 297,00,Workshop de Product Management,credit_card
-TRX-EDT-00213,ALUNO-121,Aline Caldeira,RJ,2025-11-13T20:50:00.000Z,R$ 997,00,Formação Fullstack & IA,credit_card
-TRX-EDT-00214,ALUNO-122,Alexandre Farias,SP,2025-11-18T21:50:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),boleto
-TRX-EDT-00215,ALUNO-126,Eduardo Xavier,DF,2025-11-11T13:50:00.000Z,R$ 297,00,Workshop de Product Management,boleto
-TRX-EDT-00216,ALUNO-127,Isabela Campana,SP,2025-11-16T14:50:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),pix
-TRX-EDT-00217,ALUNO-128,Daniel Gusmao,PE,2025-11-21T15:50:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00218,ALUNO-132,Gabriela Ramos,MG,2025-11-14T19:50:00.000Z,R$ 297,00,Workshop de Product Management,credit_card
-TRX-EDT-00219,ALUNO-133,Henrique Prado,PR,2025-11-19T20:50:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00220,ALUNO-134,Renata Frota,CE,2025-11-24T21:50:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),boleto
-TRX-EDT-00221,ALUNO-138,Debora Freitas,PE,2025-11-17T13:50:00.000Z,R$ 297,00,Workshop de Product Management,boleto
-TRX-EDT-00222,ALUNO-139,Wesley Pinheiro,DF,2025-11-22T14:50:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),pix
-TRX-EDT-00223,ALUNO-140,Vivian Machado,SP,2025-11-27T15:50:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00224,ALUNO-144,Amanda Esteves,ES,2025-11-20T19:50:00.000Z,R$ 297,00,Workshop de Product Management,credit_card
-TRX-EDT-00225,ALUNO-145,Cristiano Borges,GO,2025-11-25T20:50:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00226,ALUNO-146,Bruna Salgado,RS,2025-11-03T21:50:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),boleto
-TRX-EDT-00227,ALUNO-149,Rafaela Peixoto,CE,2025-11-18T12:50:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00228,ALUNO-150,Otavio Neves,BA,2025-11-23T13:50:00.000Z,R$ 297,00,Workshop de Product Management,boleto
-TRX-EDT-00229,ALUNO-101,Ana Paula Rezende,SP,2025-12-23T12:01:00.000Z,R$ 297,00,Workshop de Product Management,boleto
-TRX-EDT-00230,ALUNO-102,Carlos Eduardo Pires,RJ,2025-12-01T13:01:00.000Z,R$ 997,00,Formação Fullstack & IA,pix
-TRX-EDT-00231,ALUNO-103,Juliana Mendes Castro,MG,2025-12-06T14:01:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00232,ALUNO-107,Mariana Lacerda,CE,2025-12-26T18:01:00.000Z,R$ 297,00,Workshop de Product Management,credit_card
-TRX-EDT-00233,ALUNO-108,Guilherme Bastos,SC,2025-12-04T19:01:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00234,ALUNO-109,Camila Nogueira,DF,2025-12-09T20:01:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),boleto
-TRX-EDT-00235,ALUNO-113,Thiago Guedes,MG,2025-12-02T12:01:00.000Z,R$ 297,00,Workshop de Product Management,boleto
-TRX-EDT-00236,ALUNO-114,Vanessa Trindade,ES,2025-12-07T13:01:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),pix
-TRX-EDT-00237,ALUNO-115,Bruno Fagundes,RJ,2025-12-12T14:01:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00238,ALUNO-119,Natalia Dorneles,PR,2025-12-05T18:01:00.000Z,R$ 297,00,Workshop de Product Management,credit_card
-TRX-EDT-00239,ALUNO-120,Marcelo Bittencourt,SP,2025-12-10T19:01:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00240,ALUNO-121,Aline Caldeira,RJ,2025-12-15T20:01:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),boleto
-TRX-EDT-00241,ALUNO-125,Priscila Lovato,SC,2025-12-08T12:01:00.000Z,R$ 297,00,Workshop de Product Management,boleto
-TRX-EDT-00242,ALUNO-126,Eduardo Xavier,DF,2025-12-13T13:01:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),pix
-TRX-EDT-00243,ALUNO-127,Isabela Campana,SP,2025-12-18T14:01:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00244,ALUNO-130,Lucas Silveira,RJ,2025-12-06T17:01:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),pix
-TRX-EDT-00245,ALUNO-131,Fernando Diniz,SP,2025-12-11T18:01:00.000Z,R$ 297,00,Workshop de Product Management,credit_card
-TRX-EDT-00246,ALUNO-132,Gabriela Ramos,MG,2025-12-16T19:01:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00247,ALUNO-133,Henrique Prado,PR,2025-12-21T20:01:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),boleto
-TRX-EDT-00248,ALUNO-136,Jessica Brandao,SC,2025-12-09T23:01:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00249,ALUNO-137,Marcio Toledo,BA,2025-12-14T12:01:00.000Z,R$ 297,00,Workshop de Product Management,boleto
-TRX-EDT-00250,ALUNO-138,Debora Freitas,PE,2025-12-19T13:01:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),pix
-TRX-EDT-00251,ALUNO-139,Wesley Pinheiro,DF,2025-12-24T14:01:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00252,ALUNO-142,Luana Guimaraes,RJ,2025-12-12T17:01:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),pix
-TRX-EDT-00253,ALUNO-143,Matheus Coimbra,MG,2025-12-17T18:01:00.000Z,R$ 297,00,Workshop de Product Management,credit_card
-TRX-EDT-00254,ALUNO-144,Amanda Esteves,ES,2025-12-22T19:01:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00255,ALUNO-148,Milena Campos,SC,2025-12-15T23:01:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00256,ALUNO-149,Rafaela Peixoto,CE,2025-12-20T12:01:00.000Z,R$ 297,00,Workshop de Product Management,boleto
-TRX-EDT-00257,ALUNO-150,Otavio Neves,BA,2025-12-25T13:01:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),pix
-TRX-EDT-00258,ALUNO-101,Ana Paula Rezende,SP,2026-01-25T12:12:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),pix
-TRX-EDT-00259,ALUNO-102,Carlos Eduardo Pires,RJ,2026-01-03T13:12:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00260,ALUNO-106,Rodrigo Alencar,BA,2026-01-23T17:12:00.000Z,R$ 297,00,Workshop de Product Management,credit_card
-TRX-EDT-00261,ALUNO-107,Mariana Lacerda,CE,2026-01-01T18:12:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00262,ALUNO-108,Guilherme Bastos,SC,2026-01-06T19:12:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),boleto
-TRX-EDT-00263,ALUNO-111,Diego Antunes,GO,2026-01-21T22:12:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00264,ALUNO-112,Larissa Meireles,SP,2026-01-26T23:12:00.000Z,R$ 297,00,Workshop de Product Management,boleto
-TRX-EDT-00265,ALUNO-113,Thiago Guedes,MG,2026-01-04T12:12:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),pix
-TRX-EDT-00266,ALUNO-114,Vanessa Trindade,ES,2026-01-09T13:12:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00267,ALUNO-117,Sabrina Teles,RS,2026-01-24T16:12:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),pix
-TRX-EDT-00268,ALUNO-118,Vinicius Morais,CE,2026-01-02T17:12:00.000Z,R$ 297,00,Workshop de Product Management,credit_card
-TRX-EDT-00269,ALUNO-119,Natalia Dorneles,PR,2026-01-07T18:12:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00270,ALUNO-120,Marcelo Bittencourt,SP,2026-01-12T19:12:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),boleto
-TRX-EDT-00271,ALUNO-123,Tatiane Aragao,BA,2026-01-27T22:12:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00272,ALUNO-124,Caio Mendonca,MG,2026-01-05T23:12:00.000Z,R$ 297,00,Workshop de Product Management,boleto
-TRX-EDT-00273,ALUNO-125,Priscila Lovato,SC,2026-01-10T12:12:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),pix
-TRX-EDT-00274,ALUNO-129,Patricia Valente,GO,2026-01-03T16:12:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),pix
-TRX-EDT-00275,ALUNO-130,Lucas Silveira,RJ,2026-01-08T17:12:00.000Z,R$ 297,00,Workshop de Product Management,credit_card
-TRX-EDT-00276,ALUNO-131,Fernando Diniz,SP,2026-01-13T18:12:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00277,ALUNO-135,Gustavo Linhares,RS,2026-01-06T22:12:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00278,ALUNO-136,Jessica Brandao,SC,2026-01-11T23:12:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),boleto
-TRX-EDT-00279,ALUNO-137,Marcio Toledo,BA,2026-01-16T12:12:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),pix
-TRX-EDT-00280,ALUNO-141,Samuel Barbosa,SP,2026-01-09T16:12:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),pix
-TRX-EDT-00281,ALUNO-142,Luana Guimaraes,RJ,2026-01-14T17:12:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00282,ALUNO-143,Matheus Coimbra,MG,2026-01-19T18:12:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00283,ALUNO-147,Leandro Rocha,PR,2026-01-12T22:12:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00284,ALUNO-148,Milena Campos,SC,2026-01-17T23:12:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),boleto
-TRX-EDT-00285,ALUNO-149,Rafaela Peixoto,CE,2026-01-22T12:12:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),pix
-TRX-EDT-00286,ALUNO-101,Ana Paula Rezende,SP,2026-02-27T12:23:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00287,ALUNO-104,Felipe Siqueira,PR,2026-02-15T15:23:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),pix
-TRX-EDT-00288,ALUNO-105,Beatriz Fonseca,RS,2026-02-20T16:23:00.000Z,R$ 297,00,Workshop de Product Management,credit_card
-TRX-EDT-00289,ALUNO-106,Rodrigo Alencar,BA,2026-02-25T17:23:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00290,ALUNO-110,Lucas Vasconcelos,PE,2026-02-18T21:23:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00291,ALUNO-111,Diego Antunes,GO,2026-02-23T22:23:00.000Z,R$ 297,00,Workshop de Product Management,boleto
-TRX-EDT-00292,ALUNO-112,Larissa Meireles,SP,2026-02-01T23:23:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),pix
-TRX-EDT-00293,ALUNO-116,Renan Paiva,SP,2026-02-21T15:23:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),pix
-TRX-EDT-00294,ALUNO-117,Sabrina Teles,RS,2026-02-26T16:23:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00295,ALUNO-118,Vinicius Morais,CE,2026-02-04T17:23:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00296,ALUNO-122,Alexandre Farias,SP,2026-02-24T21:23:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00297,ALUNO-123,Tatiane Aragao,BA,2026-02-02T22:23:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),boleto
-TRX-EDT-00298,ALUNO-124,Caio Mendonca,MG,2026-02-07T23:23:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),pix
-TRX-EDT-00299,ALUNO-128,Daniel Gusmao,PE,2026-02-27T15:23:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),pix
-TRX-EDT-00300,ALUNO-129,Patricia Valente,GO,2026-02-05T16:23:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00301,ALUNO-130,Lucas Silveira,RJ,2026-02-10T17:23:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00302,ALUNO-134,Renata Frota,CE,2026-02-03T21:23:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00303,ALUNO-135,Gustavo Linhares,RS,2026-02-08T22:23:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),boleto
-TRX-EDT-00304,ALUNO-136,Jessica Brandao,SC,2026-02-13T23:23:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),pix
-TRX-EDT-00305,ALUNO-140,Vivian Machado,SP,2026-02-06T15:23:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),pix
-TRX-EDT-00306,ALUNO-141,Samuel Barbosa,SP,2026-02-11T16:23:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00307,ALUNO-142,Luana Guimaraes,RJ,2026-02-16T17:23:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00308,ALUNO-145,Cristiano Borges,GO,2026-02-04T20:23:00.000Z,R$ 2.490,00,Mentoria Executiva Tech 1on1,credit_card
-TRX-EDT-00309,ALUNO-146,Bruna Salgado,RS,2026-02-09T21:23:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),credit_card
-TRX-EDT-00310,ALUNO-147,Leandro Rocha,PR,2026-02-14T22:23:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),boleto
-TRX-EDT-00311,ALUNO-148,Milena Campos,SC,2026-02-19T23:23:00.000Z,R$ 97,00,Assinatura Comunidade Tech Pro (Mensal),pix
+"00001","ALUNO-101","Ana Paula Rezende","SP","2025-01-01T13:00:00.000Z","R$ 997,00","Formação Fullstack & IA","pix"
+"00002","ALUNO-109","Camila Nogueira","DF","2025-01-25T21:56:00.000Z","R$ 1.490,00","Certificação Cloud & DevOps","pix"
+"00003","ALUNO-117","Sabrina Teles","RS","2025-01-24T19:52:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","pix"
+"00004","ALUNO-125","Priscila Lovato","SC","2025-01-23T17:48:00.000Z","R$ 997,00","Formação Fullstack & IA","pix"
+"00005","ALUNO-133","Henrique Prado","PR","2025-01-22T15:44:00.000Z","R$ 1.490,00","Certificação Cloud & DevOps","pix"
+"00006","ALUNO-141","Samuel Barbosa","SP","2025-01-21T13:40:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","pix"
+"00007","ALUNO-149","Rafaela Peixoto","CE","2025-01-20T21:36:00.000Z","R$ 997,00","Formação Fullstack & IA","pix"
+"00008","ALUNO-102","Carlos Eduardo Pires","RJ","2025-02-05T14:07:00.000Z","R$ 497,00","Imersão em SQL & Data Analytics","credit_card"
+"00009","ALUNO-109","Camila Nogueira","DF","2025-02-16T20:11:00.000Z","R$ 2.490,00","Mentoria Executiva Tech 1on1","credit_card"
+"00010","ALUNO-110","Lucas Vasconcelos","PE","2025-02-04T22:03:00.000Z","R$ 2.490,00","Mentoria Executiva Tech 1on1","credit_card"
+"00011","ALUNO-117","Sabrina Teles","RS","2025-02-02T16:11:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00012","ALUNO-118","Vinicius Morais","CE","2025-02-03T20:59:00.000Z","R$ 297,00","Workshop de Product Management","credit_card"
+"00013","ALUNO-126","Eduardo Xavier","DF","2025-02-02T18:55:00.000Z","R$ 497,00","Imersão em SQL & Data Analytics","credit_card"
+"00014","ALUNO-133","Henrique Prado","PR","2025-02-01T20:11:00.000Z","R$ 2.490,00","Mentoria Executiva Tech 1on1","credit_card"
+"00015","ALUNO-134","Renata Frota","CE","2025-02-01T16:51:00.000Z","R$ 2.490,00","Mentoria Executiva Tech 1on1","credit_card"
+"00016","ALUNO-142","Luana Guimaraes","RJ","2025-02-25T14:47:00.000Z","R$ 297,00","Workshop de Product Management","credit_card"
+"00017","ALUNO-150","Otavio Neves","BA","2025-02-24T22:43:00.000Z","R$ 497,00","Imersão em SQL & Data Analytics","credit_card"
+"00018","ALUNO-101","Ana Paula Rezende","SP","2025-03-05T12:22:00.000Z","R$ 1.490,00","Certificação Cloud & DevOps","credit_card"
+"00019","ALUNO-102","Carlos Eduardo Pires","RJ","2025-03-10T13:22:00.000Z","R$ 2.490,00","Mentoria Executiva Tech 1on1","boleto"
+"00020","ALUNO-103","Juliana Mendes Castro","MG","2025-03-09T15:14:00.000Z","R$ 1.490,00","Certificação Cloud & DevOps","credit_card"
+"00021","ALUNO-109","Camila Nogueira","DF","2025-03-18T20:22:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00022","ALUNO-110","Lucas Vasconcelos","PE","2025-03-23T21:22:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","boleto"
+"00023","ALUNO-111","Diego Antunes","GO","2025-03-08T13:10:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00024","ALUNO-119","Natalia Dorneles","PR","2025-03-07T21:06:00.000Z","R$ 997,00","Formação Fullstack & IA","credit_card"
+"00025","ALUNO-125","Priscila Lovato","SC","2025-03-17T12:22:00.000Z","R$ 1.490,00","Certificação Cloud & DevOps","credit_card"
+"00026","ALUNO-126","Eduardo Xavier","DF","2025-03-22T13:22:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","boleto"
+"00027","ALUNO-127","Isabela Campana","SP","2025-03-06T19:02:00.000Z","R$ 1.490,00","Certificação Cloud & DevOps","credit_card"
+"00028","ALUNO-133","Henrique Prado","PR","2025-03-03T20:22:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00029","ALUNO-135","Gustavo Linhares","RS","2025-03-05T17:58:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00030","ALUNO-143","Matheus Coimbra","MG","2025-03-04T15:54:00.000Z","R$ 997,00","Formação Fullstack & IA","credit_card"
+"00031","ALUNO-149","Rafaela Peixoto","CE","2025-03-02T12:22:00.000Z","R$ 1.490,00","Certificação Cloud & DevOps","credit_card"
+"00032","ALUNO-150","Otavio Neves","BA","2025-03-07T13:22:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","boleto"
+"00033","ALUNO-101","Ana Paula Rezende","SP","2025-04-07T12:33:00.000Z","R$ 2.490,00","Mentoria Executiva Tech 1on1","boleto"
+"00034","ALUNO-102","Carlos Eduardo Pires","RJ","2025-04-12T13:33:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","pix"
+"00035","ALUNO-104","Felipe Siqueira","PR","2025-04-13T16:21:00.000Z","R$ 2.490,00","Mentoria Executiva Tech 1on1","boleto"
+"00036","ALUNO-112","Larissa Meireles","SP","2025-04-12T14:17:00.000Z","R$ 297,00","Workshop de Product Management","boleto"
+"00037","ALUNO-118","Vinicius Morais","CE","2025-04-11T17:33:00.000Z","R$ 1.490,00","Certificação Cloud & DevOps","pix"
+"00038","ALUNO-119","Natalia Dorneles","PR","2025-04-16T18:33:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00039","ALUNO-120","Marcelo Bittencourt","SP","2025-04-11T22:13:00.000Z","R$ 497,00","Imersão em SQL & Data Analytics","boleto"
+"00040","ALUNO-125","Priscila Lovato","SC","2025-04-19T12:33:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","boleto"
+"00041","ALUNO-126","Eduardo Xavier","DF","2025-04-24T13:33:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","pix"
+"00042","ALUNO-128","Daniel Gusmao","PE","2025-04-10T20:09:00.000Z","R$ 2.490,00","Mentoria Executiva Tech 1on1","boleto"
+"00043","ALUNO-135","Gustavo Linhares","RS","2025-04-15T22:33:00.000Z","R$ 497,00","Imersão em SQL & Data Analytics","credit_card"
+"00044","ALUNO-136","Jessica Brandao","SC","2025-04-09T18:05:00.000Z","R$ 297,00","Workshop de Product Management","boleto"
+"00045","ALUNO-141","Samuel Barbosa","SP","2025-04-18T16:33:00.000Z","R$ 497,00","Imersão em SQL & Data Analytics","boleto"
+"00046","ALUNO-142","Luana Guimaraes","RJ","2025-04-23T17:33:00.000Z","R$ 1.490,00","Certificação Cloud & DevOps","pix"
+"00047","ALUNO-143","Matheus Coimbra","MG","2025-04-01T18:33:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00048","ALUNO-144","Amanda Esteves","ES","2025-04-08T16:01:00.000Z","R$ 497,00","Imersão em SQL & Data Analytics","boleto"
+"00049","ALUNO-149","Rafaela Peixoto","CE","2025-04-04T12:33:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","boleto"
+"00050","ALUNO-101","Ana Paula Rezende","SP","2025-05-09T12:44:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","pix"
+"00051","ALUNO-105","Beatriz Fonseca","RS","2025-05-17T17:28:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","pix"
+"00052","ALUNO-111","Diego Antunes","GO","2025-05-05T22:44:00.000Z","R$ 1.490,00","Certificação Cloud & DevOps","credit_card"
+"00053","ALUNO-112","Larissa Meireles","SP","2025-05-10T23:44:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","boleto"
+"00054","ALUNO-113","Thiago Guedes","MG","2025-05-16T15:24:00.000Z","R$ 997,00","Formação Fullstack & IA","pix"
+"00055","ALUNO-117","Sabrina Teles","RS","2025-05-08T16:44:00.000Z","R$ 1.490,00","Certificação Cloud & DevOps","pix"
+"00056","ALUNO-118","Vinicius Morais","CE","2025-05-13T17:44:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00057","ALUNO-119","Natalia Dorneles","PR","2025-05-18T18:44:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00058","ALUNO-121","Aline Caldeira","RJ","2025-05-15T13:20:00.000Z","R$ 1.490,00","Certificação Cloud & DevOps","pix"
+"00059","ALUNO-128","Daniel Gusmao","PE","2025-05-09T15:44:00.000Z","R$ 497,00","Imersão em SQL & Data Analytics","boleto"
+"00060","ALUNO-129","Patricia Valente","GO","2025-05-14T21:16:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","pix"
+"00061","ALUNO-134","Renata Frota","CE","2025-05-12T21:44:00.000Z","R$ 497,00","Imersão em SQL & Data Analytics","credit_card"
+"00062","ALUNO-135","Gustavo Linhares","RS","2025-05-17T22:44:00.000Z","R$ 1.490,00","Certificação Cloud & DevOps","credit_card"
+"00063","ALUNO-136","Jessica Brandao","SC","2025-05-22T23:44:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","boleto"
+"00064","ALUNO-137","Marcio Toledo","BA","2025-05-13T19:12:00.000Z","R$ 997,00","Formação Fullstack & IA","pix"
+"00065","ALUNO-141","Samuel Barbosa","SP","2025-05-20T16:44:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","pix"
+"00066","ALUNO-142","Luana Guimaraes","RJ","2025-05-25T17:44:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00067","ALUNO-145","Cristiano Borges","GO","2025-05-12T17:08:00.000Z","R$ 1.490,00","Certificação Cloud & DevOps","pix"
+"00068","ALUNO-103","Juliana Mendes Castro","MG","2025-06-21T14:55:00.000Z","R$ 497,00","Imersão em SQL & Data Analytics","boleto"
+"00069","ALUNO-104","Felipe Siqueira","PR","2025-06-26T15:55:00.000Z","R$ 1.490,00","Certificação Cloud & DevOps","pix"
+"00070","ALUNO-105","Beatriz Fonseca","RS","2025-06-04T16:55:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00071","ALUNO-106","Rodrigo Alencar","BA","2025-06-21T18:35:00.000Z","R$ 297,00","Workshop de Product Management","credit_card"
+"00072","ALUNO-109","Camila Nogueira","DF","2025-06-24T20:55:00.000Z","R$ 497,00","Imersão em SQL & Data Analytics","credit_card"
+"00073","ALUNO-110","Lucas Vasconcelos","PE","2025-06-02T21:55:00.000Z","R$ 1.490,00","Certificação Cloud & DevOps","credit_card"
+"00074","ALUNO-111","Diego Antunes","GO","2025-06-07T22:55:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","boleto"
+"00075","ALUNO-114","Vanessa Trindade","ES","2025-06-20T16:31:00.000Z","R$ 497,00","Imersão em SQL & Data Analytics","credit_card"
+"00076","ALUNO-117","Sabrina Teles","RS","2025-06-10T16:55:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00077","ALUNO-121","Aline Caldeira","RJ","2025-06-03T20:55:00.000Z","R$ 497,00","Imersão em SQL & Data Analytics","credit_card"
+"00078","ALUNO-122","Alexandre Farias","SP","2025-06-19T14:27:00.000Z","R$ 2.490,00","Mentoria Executiva Tech 1on1","credit_card"
+"00079","ALUNO-127","Isabela Campana","SP","2025-06-06T14:55:00.000Z","R$ 497,00","Imersão em SQL & Data Analytics","boleto"
+"00080","ALUNO-128","Daniel Gusmao","PE","2025-06-11T15:55:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","pix"
+"00081","ALUNO-129","Patricia Valente","GO","2025-06-16T16:55:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00082","ALUNO-130","Lucas Silveira","RJ","2025-06-18T22:23:00.000Z","R$ 297,00","Workshop de Product Management","credit_card"
+"00083","ALUNO-133","Henrique Prado","PR","2025-06-09T20:55:00.000Z","R$ 497,00","Imersão em SQL & Data Analytics","credit_card"
+"00084","ALUNO-134","Renata Frota","CE","2025-06-14T21:55:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00085","ALUNO-135","Gustavo Linhares","RS","2025-06-19T22:55:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","boleto"
+"00086","ALUNO-138","Debora Freitas","PE","2025-06-17T20:19:00.000Z","R$ 497,00","Imersão em SQL & Data Analytics","credit_card"
+"00087","ALUNO-141","Samuel Barbosa","SP","2025-06-22T16:55:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00088","ALUNO-144","Amanda Esteves","ES","2025-06-10T19:55:00.000Z","R$ 997,00","Formação Fullstack & IA","pix"
+"00089","ALUNO-145","Cristiano Borges","GO","2025-06-15T20:55:00.000Z","R$ 497,00","Imersão em SQL & Data Analytics","credit_card"
+"00090","ALUNO-146","Bruna Salgado","RS","2025-06-16T18:15:00.000Z","R$ 2.490,00","Mentoria Executiva Tech 1on1","credit_card"
+"00091","ALUNO-150","Otavio Neves","BA","2025-06-13T13:55:00.000Z","R$ 997,00","Formação Fullstack & IA","credit_card"
+"00092","ALUNO-102","Carlos Eduardo Pires","RJ","2025-07-18T13:06:00.000Z","R$ 497,00","Imersão em SQL & Data Analytics","boleto"
+"00093","ALUNO-103","Juliana Mendes Castro","MG","2025-07-23T14:06:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","pix"
+"00094","ALUNO-104","Felipe Siqueira","PR","2025-07-01T15:06:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00095","ALUNO-107","Mariana Lacerda","CE","2025-07-25T19:42:00.000Z","R$ 997,00","Formação Fullstack & IA","credit_card"
+"00096","ALUNO-109","Camila Nogueira","DF","2025-07-26T20:06:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00097","ALUNO-110","Lucas Vasconcelos","PE","2025-07-04T21:06:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","boleto"
+"00098","ALUNO-114","Vanessa Trindade","ES","2025-07-24T13:06:00.000Z","R$ 497,00","Imersão em SQL & Data Analytics","boleto"
+"00099","ALUNO-115","Bruno Fagundes","RJ","2025-07-24T17:38:00.000Z","R$ 1.490,00","Certificação Cloud & DevOps","credit_card"
+"00100","ALUNO-120","Marcelo Bittencourt","SP","2025-07-27T19:06:00.000Z","R$ 497,00","Imersão em SQL & Data Analytics","credit_card"
+"00101","ALUNO-121","Aline Caldeira","RJ","2025-07-05T20:06:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00102","ALUNO-122","Alexandre Farias","SP","2025-07-10T21:06:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","boleto"
+"00103","ALUNO-123","Tatiane Aragao","BA","2025-07-23T15:34:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00104","ALUNO-125","Priscila Lovato","SC","2025-07-25T12:06:00.000Z","R$ 997,00","Formação Fullstack & IA","credit_card"
+"00105","ALUNO-126","Eduardo Xavier","DF","2025-07-03T13:06:00.000Z","R$ 497,00","Imersão em SQL & Data Analytics","boleto"
+"00106","ALUNO-127","Isabela Campana","SP","2025-07-08T14:06:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","pix"
+"00107","ALUNO-128","Daniel Gusmao","PE","2025-07-13T15:06:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00108","ALUNO-131","Fernando Diniz","SP","2025-07-22T13:30:00.000Z","R$ 997,00","Formação Fullstack & IA","credit_card"
+"00109","ALUNO-133","Henrique Prado","PR","2025-07-11T20:06:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00110","ALUNO-134","Renata Frota","CE","2025-07-16T21:06:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","boleto"
+"00111","ALUNO-137","Marcio Toledo","BA","2025-07-04T12:06:00.000Z","R$ 997,00","Formação Fullstack & IA","credit_card"
+"00112","ALUNO-138","Debora Freitas","PE","2025-07-09T13:06:00.000Z","R$ 497,00","Imersão em SQL & Data Analytics","boleto"
+"00113","ALUNO-139","Wesley Pinheiro","DF","2025-07-21T21:26:00.000Z","R$ 1.490,00","Certificação Cloud & DevOps","credit_card"
+"00114","ALUNO-143","Matheus Coimbra","MG","2025-07-07T18:06:00.000Z","R$ 997,00","Formação Fullstack & IA","pix"
+"00115","ALUNO-144","Amanda Esteves","ES","2025-07-12T19:06:00.000Z","R$ 497,00","Imersão em SQL & Data Analytics","credit_card"
+"00116","ALUNO-145","Cristiano Borges","GO","2025-07-17T20:06:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00117","ALUNO-147","Leandro Rocha","PR","2025-07-20T19:22:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00118","ALUNO-149","Rafaela Peixoto","CE","2025-07-10T12:06:00.000Z","R$ 997,00","Formação Fullstack & IA","credit_card"
+"00119","ALUNO-150","Otavio Neves","BA","2025-07-15T13:06:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","boleto"
+"00120","ALUNO-101","Ana Paula Rezende","SP","2025-08-15T12:17:00.000Z","R$ 497,00","Imersão em SQL & Data Analytics","boleto"
+"00121","ALUNO-102","Carlos Eduardo Pires","RJ","2025-08-20T13:17:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","pix"
+"00122","ALUNO-103","Juliana Mendes Castro","MG","2025-08-25T14:17:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00123","ALUNO-106","Rodrigo Alencar","BA","2025-08-13T17:17:00.000Z","R$ 997,00","Formação Fullstack & IA","pix"
+"00124","ALUNO-107","Mariana Lacerda","CE","2025-08-18T18:17:00.000Z","R$ 497,00","Imersão em SQL & Data Analytics","credit_card"
+"00125","ALUNO-108","Guilherme Bastos","SC","2025-08-04T20:49:00.000Z","R$ 497,00","Imersão em SQL & Data Analytics","boleto"
+"00126","ALUNO-109","Camila Nogueira","DF","2025-08-01T20:17:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","boleto"
+"00127","ALUNO-112","Larissa Meireles","SP","2025-08-16T23:17:00.000Z","R$ 997,00","Formação Fullstack & IA","credit_card"
+"00128","ALUNO-113","Thiago Guedes","MG","2025-08-21T12:17:00.000Z","R$ 497,00","Imersão em SQL & Data Analytics","boleto"
+"00129","ALUNO-114","Vanessa Trindade","ES","2025-08-26T13:17:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","pix"
+"00130","ALUNO-115","Bruno Fagundes","RJ","2025-08-04T14:17:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00131","ALUNO-116","Renan Paiva","SP","2025-08-03T18:45:00.000Z","R$ 2.490,00","Mentoria Executiva Tech 1on1","boleto"
+"00132","ALUNO-118","Vinicius Morais","CE","2025-08-19T17:17:00.000Z","R$ 997,00","Formação Fullstack & IA","pix"
+"00133","ALUNO-119","Natalia Dorneles","PR","2025-08-24T18:17:00.000Z","R$ 497,00","Imersão em SQL & Data Analytics","credit_card"
+"00134","ALUNO-120","Marcelo Bittencourt","SP","2025-08-02T19:17:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00135","ALUNO-124","Caio Mendonca","MG","2025-08-02T16:41:00.000Z","R$ 297,00","Workshop de Product Management","boleto"
+"00136","ALUNO-125","Priscila Lovato","SC","2025-08-27T12:17:00.000Z","R$ 497,00","Imersão em SQL & Data Analytics","boleto"
+"00137","ALUNO-126","Eduardo Xavier","DF","2025-08-05T13:17:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","pix"
+"00138","ALUNO-130","Lucas Silveira","RJ","2025-08-25T17:17:00.000Z","R$ 997,00","Formação Fullstack & IA","pix"
+"00139","ALUNO-131","Fernando Diniz","SP","2025-08-03T18:17:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00140","ALUNO-132","Gabriela Ramos","MG","2025-08-01T14:37:00.000Z","R$ 497,00","Imersão em SQL & Data Analytics","boleto"
+"00141","ALUNO-136","Jessica Brandao","SC","2025-08-01T23:17:00.000Z","R$ 997,00","Formação Fullstack & IA","credit_card"
+"00142","ALUNO-137","Marcio Toledo","BA","2025-08-06T12:17:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","boleto"
+"00143","ALUNO-138","Debora Freitas","PE","2025-08-11T13:17:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","pix"
+"00144","ALUNO-140","Vivian Machado","SP","2025-08-25T22:33:00.000Z","R$ 2.490,00","Mentoria Executiva Tech 1on1","boleto"
+"00145","ALUNO-142","Luana Guimaraes","RJ","2025-08-04T17:17:00.000Z","R$ 997,00","Formação Fullstack & IA","pix"
+"00146","ALUNO-143","Matheus Coimbra","MG","2025-08-09T18:17:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00147","ALUNO-144","Amanda Esteves","ES","2025-08-14T19:17:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00148","ALUNO-148","Milena Campos","SC","2025-08-24T20:29:00.000Z","R$ 297,00","Workshop de Product Management","boleto"
+"00149","ALUNO-149","Rafaela Peixoto","CE","2025-08-12T12:17:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","boleto"
+"00150","ALUNO-150","Otavio Neves","BA","2025-08-17T13:17:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","pix"
+"00151","ALUNO-101","Ana Paula Rezende","SP","2025-09-17T12:28:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","pix"
+"00152","ALUNO-105","Beatriz Fonseca","RS","2025-09-10T16:28:00.000Z","R$ 997,00","Formação Fullstack & IA","pix"
+"00153","ALUNO-106","Rodrigo Alencar","BA","2025-09-15T17:28:00.000Z","R$ 497,00","Imersão em SQL & Data Analytics","credit_card"
+"00154","ALUNO-107","Mariana Lacerda","CE","2025-09-20T18:28:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00155","ALUNO-111","Diego Antunes","GO","2025-09-13T22:28:00.000Z","R$ 997,00","Formação Fullstack & IA","credit_card"
+"00156","ALUNO-112","Larissa Meireles","SP","2025-09-18T23:28:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","boleto"
+"00157","ALUNO-113","Thiago Guedes","MG","2025-09-23T12:28:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","pix"
+"00158","ALUNO-117","Sabrina Teles","RS","2025-09-16T16:28:00.000Z","R$ 997,00","Formação Fullstack & IA","pix"
+"00159","ALUNO-118","Vinicius Morais","CE","2025-09-21T17:28:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00160","ALUNO-119","Natalia Dorneles","PR","2025-09-26T18:28:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00161","ALUNO-123","Tatiane Aragao","BA","2025-09-19T22:28:00.000Z","R$ 997,00","Formação Fullstack & IA","credit_card"
+"00162","ALUNO-124","Caio Mendonca","MG","2025-09-24T23:28:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","boleto"
+"00163","ALUNO-125","Priscila Lovato","SC","2025-09-02T12:28:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","pix"
+"00164","ALUNO-129","Patricia Valente","GO","2025-09-22T16:28:00.000Z","R$ 997,00","Formação Fullstack & IA","pix"
+"00165","ALUNO-130","Lucas Silveira","RJ","2025-09-27T17:28:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00166","ALUNO-131","Fernando Diniz","SP","2025-09-05T18:28:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00167","ALUNO-135","Gustavo Linhares","RS","2025-09-25T22:28:00.000Z","R$ 997,00","Formação Fullstack & IA","credit_card"
+"00168","ALUNO-136","Jessica Brandao","SC","2025-09-03T23:28:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","boleto"
+"00169","ALUNO-137","Marcio Toledo","BA","2025-09-08T12:28:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","pix"
+"00170","ALUNO-140","Vivian Machado","SP","2025-09-23T15:28:00.000Z","R$ 297,00","Workshop de Product Management","boleto"
+"00171","ALUNO-141","Samuel Barbosa","SP","2025-09-01T16:28:00.000Z","R$ 997,00","Formação Fullstack & IA","pix"
+"00172","ALUNO-142","Luana Guimaraes","RJ","2025-09-06T17:28:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00173","ALUNO-143","Matheus Coimbra","MG","2025-09-11T18:28:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00174","ALUNO-146","Bruna Salgado","RS","2025-09-26T21:28:00.000Z","R$ 297,00","Workshop de Product Management","credit_card"
+"00175","ALUNO-147","Leandro Rocha","PR","2025-09-04T22:28:00.000Z","R$ 997,00","Formação Fullstack & IA","credit_card"
+"00176","ALUNO-148","Milena Campos","SC","2025-09-09T23:28:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","boleto"
+"00177","ALUNO-104","Felipe Siqueira","PR","2025-10-07T15:39:00.000Z","R$ 997,00","Formação Fullstack & IA","pix"
+"00178","ALUNO-105","Beatriz Fonseca","RS","2025-10-12T16:39:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00179","ALUNO-106","Rodrigo Alencar","BA","2025-10-17T17:39:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00180","ALUNO-110","Lucas Vasconcelos","PE","2025-10-10T21:39:00.000Z","R$ 997,00","Formação Fullstack & IA","credit_card"
+"00181","ALUNO-111","Diego Antunes","GO","2025-10-15T22:39:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","boleto"
+"00182","ALUNO-112","Larissa Meireles","SP","2025-10-20T23:39:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","pix"
+"00183","ALUNO-116","Renan Paiva","SP","2025-10-13T15:39:00.000Z","R$ 997,00","Formação Fullstack & IA","pix"
+"00184","ALUNO-117","Sabrina Teles","RS","2025-10-18T16:39:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00185","ALUNO-118","Vinicius Morais","CE","2025-10-23T17:39:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00186","ALUNO-121","Aline Caldeira","RJ","2025-10-11T20:39:00.000Z","R$ 297,00","Workshop de Product Management","credit_card"
+"00187","ALUNO-122","Alexandre Farias","SP","2025-10-16T21:39:00.000Z","R$ 997,00","Formação Fullstack & IA","credit_card"
+"00188","ALUNO-123","Tatiane Aragao","BA","2025-10-21T22:39:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","boleto"
+"00189","ALUNO-124","Caio Mendonca","MG","2025-10-26T23:39:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","pix"
+"00190","ALUNO-127","Isabela Campana","SP","2025-10-14T14:39:00.000Z","R$ 297,00","Workshop de Product Management","boleto"
+"00191","ALUNO-128","Daniel Gusmao","PE","2025-10-19T15:39:00.000Z","R$ 997,00","Formação Fullstack & IA","pix"
+"00192","ALUNO-129","Patricia Valente","GO","2025-10-24T16:39:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00193","ALUNO-133","Henrique Prado","PR","2025-10-17T20:39:00.000Z","R$ 297,00","Workshop de Product Management","credit_card"
+"00194","ALUNO-134","Renata Frota","CE","2025-10-22T21:39:00.000Z","R$ 997,00","Formação Fullstack & IA","credit_card"
+"00195","ALUNO-135","Gustavo Linhares","RS","2025-10-27T22:39:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","boleto"
+"00196","ALUNO-139","Wesley Pinheiro","DF","2025-10-20T14:39:00.000Z","R$ 297,00","Workshop de Product Management","boleto"
+"00197","ALUNO-140","Vivian Machado","SP","2025-10-25T15:39:00.000Z","R$ 997,00","Formação Fullstack & IA","pix"
+"00198","ALUNO-141","Samuel Barbosa","SP","2025-10-03T16:39:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00199","ALUNO-145","Cristiano Borges","GO","2025-10-23T20:39:00.000Z","R$ 297,00","Workshop de Product Management","credit_card"
+"00200","ALUNO-146","Bruna Salgado","RS","2025-10-01T21:39:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00201","ALUNO-147","Leandro Rocha","PR","2025-10-06T22:39:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","boleto"
+"00202","ALUNO-102","Carlos Eduardo Pires","RJ","2025-11-26T13:50:00.000Z","R$ 297,00","Workshop de Product Management","boleto"
+"00203","ALUNO-103","Juliana Mendes Castro","MG","2025-11-04T14:50:00.000Z","R$ 997,00","Formação Fullstack & IA","pix"
+"00204","ALUNO-104","Felipe Siqueira","PR","2025-11-09T15:50:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00205","ALUNO-105","Beatriz Fonseca","RS","2025-11-14T16:50:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00206","ALUNO-108","Guilherme Bastos","SC","2025-11-02T19:50:00.000Z","R$ 297,00","Workshop de Product Management","credit_card"
+"00207","ALUNO-109","Camila Nogueira","DF","2025-11-07T20:50:00.000Z","R$ 997,00","Formação Fullstack & IA","credit_card"
+"00208","ALUNO-110","Lucas Vasconcelos","PE","2025-11-12T21:50:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","boleto"
+"00209","ALUNO-114","Vanessa Trindade","ES","2025-11-05T13:50:00.000Z","R$ 297,00","Workshop de Product Management","boleto"
+"00210","ALUNO-115","Bruno Fagundes","RJ","2025-11-10T14:50:00.000Z","R$ 997,00","Formação Fullstack & IA","pix"
+"00211","ALUNO-116","Renan Paiva","SP","2025-11-15T15:50:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00212","ALUNO-120","Marcelo Bittencourt","SP","2025-11-08T19:50:00.000Z","R$ 297,00","Workshop de Product Management","credit_card"
+"00213","ALUNO-121","Aline Caldeira","RJ","2025-11-13T20:50:00.000Z","R$ 997,00","Formação Fullstack & IA","credit_card"
+"00214","ALUNO-122","Alexandre Farias","SP","2025-11-18T21:50:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","boleto"
+"00215","ALUNO-126","Eduardo Xavier","DF","2025-11-11T13:50:00.000Z","R$ 297,00","Workshop de Product Management","boleto"
+"00216","ALUNO-127","Isabela Campana","SP","2025-11-16T14:50:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","pix"
+"00217","ALUNO-128","Daniel Gusmao","PE","2025-11-21T15:50:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00218","ALUNO-132","Gabriela Ramos","MG","2025-11-14T19:50:00.000Z","R$ 297,00","Workshop de Product Management","credit_card"
+"00219","ALUNO-133","Henrique Prado","PR","2025-11-19T20:50:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00220","ALUNO-134","Renata Frota","CE","2025-11-24T21:50:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","boleto"
+"00221","ALUNO-138","Debora Freitas","PE","2025-11-17T13:50:00.000Z","R$ 297,00","Workshop de Product Management","boleto"
+"00222","ALUNO-139","Wesley Pinheiro","DF","2025-11-22T14:50:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","pix"
+"00223","ALUNO-140","Vivian Machado","SP","2025-11-27T15:50:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00224","ALUNO-144","Amanda Esteves","ES","2025-11-20T19:50:00.000Z","R$ 297,00","Workshop de Product Management","credit_card"
+"00225","ALUNO-145","Cristiano Borges","GO","2025-11-25T20:50:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00226","ALUNO-146","Bruna Salgado","RS","2025-11-03T21:50:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","boleto"
+"00227","ALUNO-149","Rafaela Peixoto","CE","2025-11-18T12:50:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00228","ALUNO-150","Otavio Neves","BA","2025-11-23T13:50:00.000Z","R$ 297,00","Workshop de Product Management","boleto"
+"00229","ALUNO-101","Ana Paula Rezende","SP","2025-12-23T12:01:00.000Z","R$ 297,00","Workshop de Product Management","boleto"
+"00230","ALUNO-102","Carlos Eduardo Pires","RJ","2025-12-01T13:01:00.000Z","R$ 997,00","Formação Fullstack & IA","pix"
+"00231","ALUNO-103","Juliana Mendes Castro","MG","2025-12-06T14:01:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00232","ALUNO-107","Mariana Lacerda","CE","2025-12-26T18:01:00.000Z","R$ 297,00","Workshop de Product Management","credit_card"
+"00233","ALUNO-108","Guilherme Bastos","SC","2025-12-04T19:01:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00234","ALUNO-109","Camila Nogueira","DF","2025-12-09T20:01:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","boleto"
+"00235","ALUNO-113","Thiago Guedes","MG","2025-12-02T12:01:00.000Z","R$ 297,00","Workshop de Product Management","boleto"
+"00236","ALUNO-114","Vanessa Trindade","ES","2025-12-07T13:01:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","pix"
+"00237","ALUNO-115","Bruno Fagundes","RJ","2025-12-12T14:01:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00238","ALUNO-119","Natalia Dorneles","PR","2025-12-05T18:01:00.000Z","R$ 297,00","Workshop de Product Management","credit_card"
+"00239","ALUNO-120","Marcelo Bittencourt","SP","2025-12-10T19:01:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00240","ALUNO-121","Aline Caldeira","RJ","2025-12-15T20:01:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","boleto"
+"00241","ALUNO-125","Priscila Lovato","SC","2025-12-08T12:01:00.000Z","R$ 297,00","Workshop de Product Management","boleto"
+"00242","ALUNO-126","Eduardo Xavier","DF","2025-12-13T13:01:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","pix"
+"00243","ALUNO-127","Isabela Campana","SP","2025-12-18T14:01:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00244","ALUNO-130","Lucas Silveira","RJ","2025-12-06T17:01:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","pix"
+"00245","ALUNO-131","Fernando Diniz","SP","2025-12-11T18:01:00.000Z","R$ 297,00","Workshop de Product Management","credit_card"
+"00246","ALUNO-132","Gabriela Ramos","MG","2025-12-16T19:01:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00247","ALUNO-133","Henrique Prado","PR","2025-12-21T20:01:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","boleto"
+"00248","ALUNO-136","Jessica Brandao","SC","2025-12-09T23:01:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00249","ALUNO-137","Marcio Toledo","BA","2025-12-14T12:01:00.000Z","R$ 297,00","Workshop de Product Management","boleto"
+"00250","ALUNO-138","Debora Freitas","PE","2025-12-19T13:01:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","pix"
+"00251","ALUNO-139","Wesley Pinheiro","DF","2025-12-24T14:01:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00252","ALUNO-142","Luana Guimaraes","RJ","2025-12-12T17:01:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","pix"
+"00253","ALUNO-143","Matheus Coimbra","MG","2025-12-17T18:01:00.000Z","R$ 297,00","Workshop de Product Management","credit_card"
+"00254","ALUNO-144","Amanda Esteves","ES","2025-12-22T19:01:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00255","ALUNO-148","Milena Campos","SC","2025-12-15T23:01:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00256","ALUNO-149","Rafaela Peixoto","CE","2025-12-20T12:01:00.000Z","R$ 297,00","Workshop de Product Management","boleto"
+"00257","ALUNO-150","Otavio Neves","BA","2025-12-25T13:01:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","pix"
+"00258","ALUNO-101","Ana Paula Rezende","SP","2026-01-25T12:12:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","pix"
+"00259","ALUNO-102","Carlos Eduardo Pires","RJ","2026-01-03T13:12:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00260","ALUNO-106","Rodrigo Alencar","BA","2026-01-23T17:12:00.000Z","R$ 297,00","Workshop de Product Management","credit_card"
+"00261","ALUNO-107","Mariana Lacerda","CE","2026-01-01T18:12:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00262","ALUNO-108","Guilherme Bastos","SC","2026-01-06T19:12:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","boleto"
+"00263","ALUNO-111","Diego Antunes","GO","2026-01-21T22:12:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00264","ALUNO-112","Larissa Meireles","SP","2026-01-26T23:12:00.000Z","R$ 297,00","Workshop de Product Management","boleto"
+"00265","ALUNO-113","Thiago Guedes","MG","2026-01-04T12:12:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","pix"
+"00266","ALUNO-114","Vanessa Trindade","ES","2026-01-09T13:12:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00267","ALUNO-117","Sabrina Teles","RS","2026-01-24T16:12:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","pix"
+"00268","ALUNO-118","Vinicius Morais","CE","2026-01-02T17:12:00.000Z","R$ 297,00","Workshop de Product Management","credit_card"
+"00269","ALUNO-119","Natalia Dorneles","PR","2026-01-07T18:12:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00270","ALUNO-120","Marcelo Bittencourt","SP","2026-01-12T19:12:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","boleto"
+"00271","ALUNO-123","Tatiane Aragao","BA","2026-01-27T22:12:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00272","ALUNO-124","Caio Mendonca","MG","2026-01-05T23:12:00.000Z","R$ 297,00","Workshop de Product Management","boleto"
+"00273","ALUNO-125","Priscila Lovato","SC","2026-01-10T12:12:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","pix"
+"00274","ALUNO-129","Patricia Valente","GO","2026-01-03T16:12:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","pix"
+"00275","ALUNO-130","Lucas Silveira","RJ","2026-01-08T17:12:00.000Z","R$ 297,00","Workshop de Product Management","credit_card"
+"00276","ALUNO-131","Fernando Diniz","SP","2026-01-13T18:12:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00277","ALUNO-135","Gustavo Linhares","RS","2026-01-06T22:12:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00278","ALUNO-136","Jessica Brandao","SC","2026-01-11T23:12:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","boleto"
+"00279","ALUNO-137","Marcio Toledo","BA","2026-01-16T12:12:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","pix"
+"00280","ALUNO-141","Samuel Barbosa","SP","2026-01-09T16:12:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","pix"
+"00281","ALUNO-142","Luana Guimaraes","RJ","2026-01-14T17:12:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00282","ALUNO-143","Matheus Coimbra","MG","2026-01-19T18:12:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00283","ALUNO-147","Leandro Rocha","PR","2026-01-12T22:12:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00284","ALUNO-148","Milena Campos","SC","2026-01-17T23:12:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","boleto"
+"00285","ALUNO-149","Rafaela Peixoto","CE","2026-01-22T12:12:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","pix"
+"00286","ALUNO-101","Ana Paula Rezende","SP","2026-02-27T12:23:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00287","ALUNO-104","Felipe Siqueira","PR","2026-02-15T15:23:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","pix"
+"00288","ALUNO-105","Beatriz Fonseca","RS","2026-02-20T16:23:00.000Z","R$ 297,00","Workshop de Product Management","credit_card"
+"00289","ALUNO-106","Rodrigo Alencar","BA","2026-02-25T17:23:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00290","ALUNO-110","Lucas Vasconcelos","PE","2026-02-18T21:23:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00291","ALUNO-111","Diego Antunes","GO","2026-02-23T22:23:00.000Z","R$ 297,00","Workshop de Product Management","boleto"
+"00292","ALUNO-112","Larissa Meireles","SP","2026-02-01T23:23:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","pix"
+"00293","ALUNO-116","Renan Paiva","SP","2026-02-21T15:23:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","pix"
+"00294","ALUNO-117","Sabrina Teles","RS","2026-02-26T16:23:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00295","ALUNO-118","Vinicius Morais","CE","2026-02-04T17:23:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00296","ALUNO-122","Alexandre Farias","SP","2026-02-24T21:23:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00297","ALUNO-123","Tatiane Aragao","BA","2026-02-02T22:23:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","boleto"
+"00298","ALUNO-124","Caio Mendonca","MG","2026-02-07T23:23:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","pix"
+"00299","ALUNO-128","Daniel Gusmao","PE","2026-02-27T15:23:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","pix"
+"00300","ALUNO-129","Patricia Valente","GO","2026-02-05T16:23:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00301","ALUNO-130","Lucas Silveira","RJ","2026-02-10T17:23:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00302","ALUNO-134","Renata Frota","CE","2026-02-03T21:23:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00303","ALUNO-135","Gustavo Linhares","RS","2026-02-08T22:23:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","boleto"
+"00304","ALUNO-136","Jessica Brandao","SC","2026-02-13T23:23:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","pix"
+"00305","ALUNO-140","Vivian Machado","SP","2026-02-06T15:23:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","pix"
+"00306","ALUNO-141","Samuel Barbosa","SP","2026-02-11T16:23:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00307","ALUNO-142","Luana Guimaraes","RJ","2026-02-16T17:23:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00308","ALUNO-145","Cristiano Borges","GO","2026-02-04T20:23:00.000Z","R$ 2.490,00","Mentoria Executiva Tech 1on1","credit_card"
+"00309","ALUNO-146","Bruna Salgado","RS","2026-02-09T21:23:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","credit_card"
+"00310","ALUNO-147","Leandro Rocha","PR","2026-02-14T22:23:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","boleto"
+"00311","ALUNO-148","Milena Campos","SC","2026-02-19T23:23:00.000Z","R$ 97,00","Assinatura Comunidade Tech Pro (Mensal)","pix"

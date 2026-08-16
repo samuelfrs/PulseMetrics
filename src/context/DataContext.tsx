@@ -144,6 +144,19 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
         await supabase.from('orders').upsert(orderBatches, { onConflict: 'order_id' });
       }
 
+      // Batch upsert order_items
+      if (items.length > 0) {
+        const itemBatches = items.slice(0, 1000).map((it) => ({
+          order_item_id: it.order_item_id,
+          order_id: it.order_id,
+          product_id: it.product_id,
+          product_category: it.product_category,
+          price: it.price,
+          freight_value: it.freight_value || 0,
+        }));
+        await supabase.from('order_items').upsert(itemBatches, { onConflict: 'order_item_id' });
+      }
+
       setIsLoading(false);
       return { success: true, count: Math.min(orders.length, 1000) };
     } catch (err: any) {

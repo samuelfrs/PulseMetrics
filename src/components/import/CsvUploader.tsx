@@ -84,7 +84,19 @@ export function CsvUploader() {
         'price',
         'receita',
       ]),
-      category: findMatch(['categoriacurso', 'categoria', 'category', 'produto', 'curso']),
+      category: findMatch([
+        'categoriacurso',
+        'categoriadocurso',
+        'categoria',
+        'category',
+        'productcategory',
+        'produto',
+        'curso',
+        'nomecurso',
+        'servico',
+        'item',
+        'departamento',
+      ]),
     });
   };
 

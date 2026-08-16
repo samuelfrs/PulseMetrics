@@ -68,32 +68,28 @@ const PAYMENTS = ['pix', 'credit_card', 'credit_card', 'boleto'];
 const rows = ['id_transacao,id_aluno,nome_completo,uf_residencia,data_matricula,valor_pago,categoria_curso,forma_pagamento'];
 
 let trxId = 1;
-const baseDate = new Date('2025-01-05T10:00:00Z');
 
 // Distribute over 14 months (Jan 2025 to Feb 2026)
 for (let month = 0; month < 14; month++) {
   STUDENTS.forEach((student, sIdx) => {
-    // Determine student purchase behavior
-    // Some students buy in first month and repeat monthly (subscriptions)
-    // Some buy multiple premium courses
     const studentJoinMonth = sIdx % 8; // Jan to Aug
     if (month < studentJoinMonth) return;
 
     if (month === studentJoinMonth) {
       // First course purchase
-      const course = COURSES[sIdx % 4];
+      const course = COURSES[sIdx % COURSES.length];
       const day = ((sIdx * 3 + month) % 25) + 1;
       const d = new Date(2025, month, day, 10 + (sIdx % 10), (sIdx * 7) % 60);
       const payment = PAYMENTS[sIdx % PAYMENTS.length];
 
+      // Note: wrap values in quotes so commas in price or title don't split columns
       rows.push(
-        `TRX-EDT-${String(trxId++).padStart(5, '0')},${student.id},${student.name},${student.uf},${d.toISOString()},${course.price},${course.name},${payment}`
+        `"${String(trxId++).padStart(5, '0')}","${student.id}","${student.name}","${student.uf}","${d.toISOString()}","${course.price}","${course.name}","${payment}"`
       );
     } else {
       // Retention / subsequent purchases
       const roll = ((sIdx * 17 + month * 23) % 100) / 100;
       if (roll > 0.45) {
-        // Bought subscription or next module
         const isSub = roll > 0.70;
         const course = isSub ? COURSES[4] : COURSES[(sIdx + month) % COURSES.length];
         const day = ((sIdx * 5 + month * 2) % 27) + 1;
@@ -101,7 +97,7 @@ for (let month = 0; month < 14; month++) {
         const payment = PAYMENTS[(sIdx + month) % PAYMENTS.length];
 
         rows.push(
-          `TRX-EDT-${String(trxId++).padStart(5, '0')},${student.id},${student.name},${student.uf},${d.toISOString()},${course.price},${course.name},${payment}`
+          `"${String(trxId++).padStart(5, '0')}","${student.id}","${student.name}","${student.uf}","${d.toISOString()}","${course.price}","${course.name}","${payment}"`
         );
       }
     }
@@ -110,4 +106,4 @@ for (let month = 0; month < 14; month++) {
 
 const outputPath = path.join(__dirname, '..', 'public', 'sample-datasets', 'edtech_digital_subscriptions.csv');
 fs.writeFileSync(outputPath, rows.join('\n'), 'utf8');
-console.log(`Generated ${rows.length - 1} transactions to ${outputPath}`);
+console.log(`Regenerated ${rows.length - 1} transactions with quoted values to ${outputPath}`);
