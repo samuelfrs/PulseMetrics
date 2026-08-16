@@ -235,4 +235,35 @@ WHERE o.order_status = 'delivered'
 GROUP BY oi.product_category
 ORDER BY total_revenue DESC;`,
   },
+
+  order_items_join: {
+    id: 'order_items_join',
+    title: 'Detalhamento Completo de Pedido & Composição de Itens (JOIN 1:N)',
+    category: 'kpi',
+    complexity: 'Intermediário',
+    keyFeatures: ['JOIN Relacional 1:N', 'Múltiplos Itens por Pedido', 'Filtro por ID de Pedido'],
+    businessRationale:
+      'Recupera a composição exata de um carrinho de compras: cliente, itens, categorias, valores unitários e valor total transacionado.',
+    statisticalConcept:
+      'Une as tabelas orders, customers e order_items via chaves estrangeiras (customer_id e order_id).',
+    sqlCode: `SELECT 
+    o.order_id,
+    o.order_purchase_timestamp,
+    o.order_status,
+    o.payment_method,
+    c.customer_id,
+    c.customer_name,
+    c.customer_state,
+    oi.order_item_id,
+    oi.product_id,
+    oi.product_category,
+    oi.price AS item_price,
+    oi.freight_value,
+    o.total_amount AS order_total_amount
+FROM orders o
+JOIN customers c ON o.customer_id = c.customer_id
+JOIN order_items oi ON o.order_id = oi.order_id
+WHERE o.order_id = 'CA-2016-152156'
+ORDER BY oi.order_item_id ASC;`,
+  },
 };

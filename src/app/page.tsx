@@ -38,10 +38,17 @@ export default function DashboardPage() {
           </p>
         </div>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2.5 flex-wrap">
+          <Link
+            href="/orders"
+            className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-medium bg-zinc-800/80 hover:bg-zinc-700 text-zinc-200 border border-zinc-700 transition"
+          >
+            <span>Ver Pedidos (1:N)</span>
+            <ArrowUpRight className="w-3.5 h-3.5" />
+          </Link>
           <Link
             href="/cohorts"
-            className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-medium bg-zinc-800 hover:bg-zinc-700 text-zinc-200 border border-zinc-700 transition"
+            className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-medium bg-zinc-800/80 hover:bg-zinc-700 text-zinc-200 border border-zinc-700 transition"
           >
             <span>Ver Coortes</span>
             <ArrowUpRight className="w-3.5 h-3.5" />

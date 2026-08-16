@@ -12,6 +12,7 @@ import {
   Activity,
   Database,
   X,
+  ShoppingBag,
 } from 'lucide-react';
 import { useData } from '@/context/DataContext';
 
@@ -21,6 +22,12 @@ export const NAV_ITEMS = [
     label: 'Visão Geral',
     icon: LayoutDashboard,
     badge: 'KPIs',
+  },
+  {
+    href: '/orders',
+    label: 'Transações & Pedidos',
+    icon: ShoppingBag,
+    badge: '1:N',
   },
   {
     href: '/cohorts',
