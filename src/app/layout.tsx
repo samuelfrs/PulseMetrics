@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'pt_BR',
-    url: 'https://pulse-metrics.vercel.app',
+    url: 'https://pulse-metrics-one.vercel.app',
     title: 'PulseMetrics — Inteligência de Receita, Retenção & RFM',
     description:
       'Plataforma analítica de alta performance para análise de coortes, segmentação de clientes RFM e projeção de receita com consultas SQL inspecionáveis.',
