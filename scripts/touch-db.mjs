@@ -2,6 +2,11 @@ import { createClient } from '@supabase/supabase-js';
 import { readFileSync, existsSync } from 'fs';
 import { resolve } from 'path';
 
+// Polyfill seguro de WebSocket para compatibilidade com versões antigas do Node.js
+if (typeof globalThis.WebSocket === 'undefined') {
+  globalThis.WebSocket = class WebSocketPolyfill {};
+}
+
 // Carrega .env.local caso exista (para execuções locais diretas)
 function loadEnvLocal() {
   const envPath = resolve(process.cwd(), '.env.local');
