@@ -43,10 +43,18 @@ ALTER TABLE customers ENABLE ROW LEVEL SECURITY;
 ALTER TABLE orders ENABLE ROW LEVEL SECURITY;
 ALTER TABLE order_items ENABLE ROW LEVEL SECURITY;
 
--- POLÍTICAS DE ACESSO (PÚBLICO LEITURA E INSERÇÃO)
+-- POLÍTICAS DE ACESSO (PÚBLICO LEITURA, INSERÇÃO, ATUALIZAÇÃO E EXCLUSÃO)
 CREATE POLICY IF NOT EXISTS "Allow public read customers" ON customers FOR SELECT USING (true);
 CREATE POLICY IF NOT EXISTS "Allow public insert customers" ON customers FOR INSERT WITH CHECK (true);
+CREATE POLICY IF NOT EXISTS "Allow public update customers" ON customers FOR UPDATE USING (true) WITH CHECK (true);
+CREATE POLICY IF NOT EXISTS "Allow public delete customers" ON customers FOR DELETE USING (true);
+
 CREATE POLICY IF NOT EXISTS "Allow public read orders" ON orders FOR SELECT USING (true);
 CREATE POLICY IF NOT EXISTS "Allow public insert orders" ON orders FOR INSERT WITH CHECK (true);
+CREATE POLICY IF NOT EXISTS "Allow public update orders" ON orders FOR UPDATE USING (true) WITH CHECK (true);
+CREATE POLICY IF NOT EXISTS "Allow public delete orders" ON orders FOR DELETE USING (true);
+
 CREATE POLICY IF NOT EXISTS "Allow public read order_items" ON order_items FOR SELECT USING (true);
 CREATE POLICY IF NOT EXISTS "Allow public insert order_items" ON order_items FOR INSERT WITH CHECK (true);
+CREATE POLICY IF NOT EXISTS "Allow public update order_items" ON order_items FOR UPDATE USING (true) WITH CHECK (true);
+CREATE POLICY IF NOT EXISTS "Allow public delete order_items" ON order_items FOR DELETE USING (true);

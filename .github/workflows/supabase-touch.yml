@@ -1,0 +1,32 @@
+name: Supabase DB Touch (Keep-Alive)
+
+on:
+  schedule:
+    # Dispara a cada 3 dias às 12:00 UTC
+    - cron: '0 12 */3 * *'
+  workflow_dispatch: # Permite disparo manual direto no painel do GitHub
+
+jobs:
+  touch-database:
+    name: Touch Supabase PostgreSQL
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci --prefer-offline --no-audit
+
+      - name: Run Supabase Touch Script
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL || 'https://ggorriqjhfisqvznqwvf.supabase.co' }}
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imdnb3JyaXFqaGZpc3F2em5xd3ZmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODY4OTg3MTQsImV4cCI6MjEwMjQ3NDcxNH0.NDNSSUKSZ8nKj6hoZwYoactxTFV_3VWmT2VHHgX_Oto' }}
+        run: npm run db:touch

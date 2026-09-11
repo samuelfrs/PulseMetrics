@@ -132,7 +132,17 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
         return false;
       }
 
-      setOrders(dbOrders as Order[]);
+      const customerMap = new Map((dbCustomers as Customer[]).map((c) => [c.customer_id, c]));
+      const enrichedOrders: Order[] = (dbOrders as Order[]).map((o) => {
+        const cust = customerMap.get(o.customer_id);
+        return {
+          ...o,
+          customer_name: cust?.customer_name || 'Cliente Geral',
+          customer_state: cust?.customer_state || 'SP',
+        };
+      });
+
+      setOrders(enrichedOrders);
       setCustomers(dbCustomers as Customer[]);
       setItems(dbItems as OrderItem[]);
       setDataSource('supabase');
